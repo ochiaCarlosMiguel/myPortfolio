@@ -231,11 +231,26 @@ body {
   text-align: justify;
 }
 
+.skills-groups {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-group-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 0.5em;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  margin-top: 2em;
 }
 
 .skill-tag {
@@ -269,6 +284,10 @@ body {
 
   .about-content p {
     text-align: center;
+  }
+
+  .skills-groups {
+    align-items: center;
   }
 
   .skills-container {
@@ -1495,8 +1514,8 @@ body {
               </div>
               <h2>I'm Carlos Miguel Ochia</h2>
               <p class="textp">
-              QA Engineer specializing in manual testing, automation testing, and release validation.<br>
-              Open to QA Engineer / Software Tester opportunities
+                QA Engineer specializing in manual testing, automation testing, and release validation.<br>
+                Open to QA Engineer / Software Tester opportunities
               </p>
               <div class="projects">
                 <a href="#works"><button>PROJECTS</button></a>
@@ -1514,7 +1533,7 @@ body {
     <section id="about">
       <div class="about">
         <div class="about-image">
-          <img class="profile" src="profile.jpg" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+          <img class="profile" src="profiles.jpg" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
           <div class="image-backdrop"></div>
         </div>
         <div class="text">
@@ -1525,33 +1544,46 @@ body {
             <p>In addition, I worked as a Freelance Web Developer, building web-based systems using AI-assisted tools, with a focus on functionality, responsive design, and UI/UX implementation.</p>
             <p>I am passionate about Software Quality Assurance, particularly in manual testing, automated testing, regression testing, and improving software reliability through structured QA processes.</p>
           </div>
-          <div class="skills-container" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
-            <div class="skill-tag cursor-skill">
-              <i class="fas fa-robot"></i> Cursor AI
+          <div class="skills-groups" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
+            <div class="skill-group">
+              <p class="skill-group-label">Quality Assurance & Testing</p>
+              <div class="skills-container">
+                <div class="skill-tag"><i class="fas fa-hand-pointer"></i> Manual Testing</div>
+                <div class="skill-tag"><i class="fas fa-robot"></i> Automation Testing</div>
+                <div class="skill-tag"><i class="fas fa-redo"></i> Regression Testing</div>
+                <div class="skill-tag"><i class="fas fa-fire"></i> Smoke Testing</div>
+                <div class="skill-tag"><i class="fas fa-check-double"></i> Sanity Testing</div>
+                <div class="skill-tag"><i class="fas fa-tasks"></i> Functional Testing</div>
+                <div class="skill-tag"><i class="fas fa-route"></i> End-to-End Testing</div>
+                <div class="skill-tag"><i class="fas fa-search"></i> Exploratory Testing</div>
+                <div class="skill-tag"><i class="fas fa-plug"></i> API Testing</div>
+                <div class="skill-tag"><i class="fas fa-clipboard-list"></i> Test Case Creation</div>
+                <div class="skill-tag"><i class="fas fa-bug"></i> Bug Tracking</div>
+                <div class="skill-tag"><i class="fas fa-file-alt"></i> Defect Reporting</div>
+                <div class="skill-tag"><i class="fas fa-microscope"></i> Defect Analysis & RCA</div>
+                <div class="skill-tag"><i class="fas fa-book"></i> QA Documentation</div>
+              </div>
             </div>
-            <div class="skill-tag">
-              <i class="fas fa-vial"></i> Quality Assurance
+            <div class="skill-group">
+              <p class="skill-group-label">Development & Tools</p>
+              <div class="skills-container">
+                <div class="skill-tag"><i class="fas fa-laptop-code"></i> AI-Assisted Web Development</div>
+                <div class="skill-tag"><i class="fab fa-html5"></i> HTML, CSS, JavaScript</div>
+                <div class="skill-tag"><i class="fas fa-database"></i> PHP & MySQL</div>
+                <div class="skill-tag"><i class="fas fa-paint-brush"></i> Figma (UI/UX)</div>
+                <div class="skill-tag cursor-skill"><i class="fas fa-robot"></i> Cursor AI</div>
+                <div class="skill-tag"><i class="fas fa-file-word"></i> Microsoft Word & Excel</div>
+                <div class="skill-tag"><i class="fas fa-code"></i> Vibe Coding</div>
+              </div>
             </div>
-            <div class="skill-tag">
-              <i class="fas fa-code"></i> Code Vibing
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-paint-brush"></i> Figma (UI/UX)
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-users"></i> Teamwork
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-random"></i> Adaptability
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-laptop-code"></i> HTML/CSS
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-file-code"></i> JavaScript
-            </div>
-            <div class="skill-tag">
-              <i class="fas fa-server"></i> PHP
+            <div class="skill-group">
+              <p class="skill-group-label">Soft Skills</p>
+              <div class="skills-container">
+                <div class="skill-tag"><i class="fas fa-random"></i> Adaptability</div>
+                <div class="skill-tag"><i class="fas fa-users"></i> Teamwork</div>
+                <div class="skill-tag"><i class="fas fa-comments"></i> Communication</div>
+                <div class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1561,42 +1593,42 @@ body {
 
     <section id="services">
       <div class="service">
-        <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">Technical <span>Focus</span></h2>
+        <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">Core <span>Expertise</span></h2>
         <div class="skills-grid">
           <div class="skill-card" data-aos="fade-up" data-aos-delay="550" data-aos-duration="800">
             <i class="fas fa-vial"></i>
-            <h3>Quality Assurance</h3>
-            <p>Experienced in both manual and automated testing, with a focus on quality improvement and process optimization</p>
+            <h3>Quality Assurance & Testing</h3>
+            <p>Manual and automation testing across regression, smoke, sanity, functional, E2E, exploratory, and API testing to validate releases before production</p>
           </div>
-          
+
           <div class="skill-card" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800">
-            <i class="fas fa-robot"></i>
-            <h3>AI-POWERED PHP DEVELOPMENT</h3>
-            <p>Proficient in leveraging AI tools for efficient web development</p>
+            <i class="fas fa-clipboard-check"></i>
+            <h3>QA Process & Documentation</h3>
+            <p>Structured test case creation, bug tracking, defect reporting, root cause analysis, and clear QA documentation for traceable, high-quality delivery</p>
           </div>
-          
+
           <div class="skill-card" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
+            <i class="fas fa-robot"></i>
+            <h3>AI-Assisted Development</h3>
+            <p>Build and test web systems using Cursor AI with HTML, CSS, JavaScript, PHP, and MySQL — fast delivery without sacrificing functionality</p>
+          </div>
+
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="850" data-aos-duration="800">
             <i class="fas fa-paint-brush"></i>
             <h3>UI/UX Design</h3>
-            <p>Advanced proficiency in Figma for creating intuitive and visually appealing interfaces</p>
+            <p>Figma prototyping for intuitive interfaces — supporting usability testing and clearer communication with design and dev teams</p>
           </div>
-          
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="850" data-aos-duration="800">
-            <i class="fas fa-code"></i>
-            <h3>Web Development</h3>
-            <p>Experience in creating responsive websites using HTML, CSS, JavaScript, and PHP</p>
-          </div>
-          
+
           <div class="skill-card" data-aos="fade-up" data-aos-delay="950" data-aos-duration="800">
-            <i class="fas fa-random"></i>
-            <h3>Adaptability</h3>
-            <p>Quick to learn new technologies and methodologies in the ever-evolving tech landscape</p>
+            <i class="fas fa-code"></i>
+            <h3>Vibe Coding</h3>
+            <p>Creative, AI-assisted development workflow for rapid prototyping, side projects, and turning ideas into working demos efficiently</p>
           </div>
-          
+
           <div class="skill-card" data-aos="fade-up" data-aos-delay="1050" data-aos-duration="800">
-            <i class="fas fa-dumbbell"></i>
-            <h3>Personal Development</h3>
-            <p>Balancing technical growth with physical fitness for overall well-being</p>
+            <i class="fas fa-handshake"></i>
+            <h3>Professional Collaboration</h3>
+            <p>Strong adaptability, teamwork, communication, and problem solving — essential for cross-functional QA, dev, and client-facing work</p>
           </div>
         </div>
       </div>
