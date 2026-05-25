@@ -149,20 +149,34 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  gap: 4em;
+  flex-direction: column;
+  gap: 2.5rem;
   position: relative;
+}
+
+.about-main {
+  display: flex;
+  align-items: stretch;
+  gap: 4em;
 }
 
 .about-image {
   position: relative;
-  flex: 1;
+  flex: 0 0 340px;
+  max-width: 340px;
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .profile {
-  height: auto;
-  max-width: 400px;
+  height: 100%;
+  min-height: 420px;
+  max-width: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: center 15%;
   border-radius: 20px;
   position: relative;
   z-index: 2;
@@ -220,7 +234,7 @@ body {
 }
 
 .about-content {
-  margin-bottom: 2em;
+  margin-bottom: 0;
 }
 
 .about-content p {
@@ -232,10 +246,12 @@ body {
 }
 
 .skills-groups {
-  margin-top: 2em;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(96, 165, 250, 0.15);
 }
 
 .skill-group-label {
@@ -271,10 +287,23 @@ body {
 }
 
 @media only screen and (max-width: 968px) {
-  .about {
+  .about-main {
     flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 3em;
+  }
+
+  .about-image {
+    flex: none;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .profile {
+    min-height: auto;
+    height: auto;
+    max-width: 300px;
   }
 
   .text h2::after {
@@ -292,10 +321,6 @@ body {
 
   .skills-container {
     justify-content: center;
-  }
-
-  .profile {
-    max-width: 300px;
   }
 }
 
@@ -1532,19 +1557,22 @@ body {
 
     <section id="about">
       <div class="about">
-        <div class="about-image">
-          <img class="profile" src="profile.jpg" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
-          <div class="image-backdrop"></div>
-        </div>
-        <div class="text">
-          <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">About <span>Me</span></h2>
-          <div class="about-content" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800">
-            <p>I am a Bachelor of Industrial Technology graduate from Bulacan State University, majoring in Computer Technology. During my academic journey, I served as Associate Director for Communication (2022) and Director for Logistics (2023) at SPICE-CIT, where I developed strong leadership and organizational skills.</p>
-            <p>I have professional experience as a Quality Assurance Engineer, where I performed manual and automated testing across multiple environments, including regression, sanity, smoke, functional, and end-to-end testing. I was also involved in defect tracking, root cause analysis, release validation, and client support activities, ensuring timely issue resolution and quality delivery.</p>
-            <p>In addition, I worked as a Freelance Web Developer, building web-based systems using AI-assisted tools, with a focus on functionality, responsive design, and UI/UX implementation.</p>
-            <p>I am passionate about Software Quality Assurance, particularly in manual testing, automated testing, regression testing, and improving software reliability through structured QA processes.</p>
+        <div class="about-main">
+          <div class="about-image">
+            <img class="profile" src="profile.jpg" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+            <div class="image-backdrop"></div>
           </div>
-          <div class="skills-groups" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
+          <div class="text">
+            <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">About <span>Me</span></h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800">
+              <p>I am a Bachelor of Industrial Technology graduate from Bulacan State University, majoring in Computer Technology. During my academic journey, I served as Associate Director for Communication (2022) and Director for Logistics (2023) at SPICE-CIT, where I developed strong leadership and organizational skills.</p>
+              <p>I have professional experience as a Quality Assurance Engineer, where I performed manual and automated testing across multiple environments, including regression, sanity, smoke, functional, and end-to-end testing. I was also involved in defect tracking, root cause analysis, release validation, and client support activities, ensuring timely issue resolution and quality delivery.</p>
+              <p>In addition, I worked as a Freelance Web Developer, building web-based systems using AI-assisted tools, with a focus on functionality, responsive design, and UI/UX implementation.</p>
+              <p>I am passionate about Software Quality Assurance, particularly in manual testing, automated testing, regression testing, and improving software reliability through structured QA processes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="skills-groups" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
             <div class="skill-group">
               <p class="skill-group-label">Quality Assurance & Testing</p>
               <div class="skills-container">
@@ -1587,7 +1615,6 @@ body {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
 
