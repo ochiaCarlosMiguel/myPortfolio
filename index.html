@@ -1,2093 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="Website Icon" type="png" href="logos.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;  
-}
-body{
-  scroll-behavior: smooth;
-}
-
-header{
-  padding: 0.8em;
-}
-.logo h2{
-    font-size: 2.2rem;
-    font-weight: 700;
-}
-span{
-    color: var(--accent-color);
-}
-#home{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 95%;
-    margin: 60px auto;
-    padding-top: 1em;
-    gap: 3rem;
-}
-.hero-title .textp{
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-weight: 300;
-    margin-bottom: 1.5em;
-}
-.hero-title .textp2{
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    font-weight: 300;
-}
-.hero-title h2{
-    font-size: 4.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    width: 80%;
-    line-height: 1em;
-    margin-bottom: 0.5em;
-    background: linear-gradient(to right, #E5E7EB, #60A5FA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.designstrip{
-    height: 100% auto;
-    width: 100%;
-    max-width: 500px;
-    transition: 0.2s ease;
-}
-.designstrip:hover{
-    transform: scale(1.1)
-}
-.projects button{
-    padding: 9px 33px;
-    letter-spacing: 2px;
-    font-weight: 300;
-    border: none;
-    margin-bottom: 1.5em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.social{
-    margin-left: -0.4em;
-}
-.social a{
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: inline-flex;
-    font-size: 17px;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    cursor: pointer;
-    margin: 5px;
-    text-decoration: none;
-    background: var(--secondary-bg);
-    color: var(--accent-color);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.social a:hover{
-    background: var(--accent-color);
-    color: #fff;
-    transform: translateY(-3px);
-}
-.heading-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .waving-hand{
-    margin-left: 10px;
-    font-size: 1.8rem;
-    margin-top: -0.3em;
-  }
-  
-  .shake-hand {
-    animation: shake 0.2s infinite;
-  }
-  
-  @keyframes shake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(-30deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(30deg); }
-    100% { transform: rotate(0deg); }
-  }
-body {
-    background: #1F2937;
-    color: #E5E7EB;
-}
-
-.box {
-    background: #2C3544;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#about {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 80px 0;
-  background: linear-gradient(135deg, rgba(44, 53, 68, 0.9), rgba(31, 41, 55, 0.9));
-}
-
-.about {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  position: relative;
-}
-
-.about-main {
-  display: flex;
-  align-items: stretch;
-  gap: 4em;
-}
-
-.about-image {
-  position: relative;
-  flex: 0 0 340px;
-  max-width: 340px;
-  align-self: stretch;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.profile {
-  height: 100%;
-  min-height: 420px;
-  max-width: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center 15%;
-  border-radius: 20px;
-  position: relative;
-  z-index: 2;
-  transition: all 0.5s ease;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(96, 165, 250, 0.3);
-}
-
-.image-backdrop {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #60A5FA, #E5E7EB);
-  border-radius: 20px;
-  z-index: 1;
-  opacity: 0.3;
-  transition: all 0.5s ease;
-}
-
-.about-image:hover .profile {
-  transform: translate(-10px, -10px);
-}
-
-.about-image:hover .image-backdrop {
-  transform: translate(10px, 10px);
-}
-
-.text {
-  flex: 1.2;
-  position: relative;
-}
-
-.text h2 {
-  font-size: 2.8rem;
-  letter-spacing: 2px;
-  font-weight: 700;
-  margin-bottom: 1.5em;
-  background: linear-gradient(to right, #60A5FA, #E5E7EB);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-}
-
-.text h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(to right, #60A5FA, #E5E7EB);
-  border-radius: 2px;
-}
-
-.about-content {
-  margin-bottom: 0;
-}
-
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #E5E7EB;
-  margin-bottom: 1em;
-  text-align: justify;
-}
-
-.skills-groups {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(96, 165, 250, 0.15);
-}
-
-.skill-group-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #60A5FA;
-  margin-bottom: 0.5em;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.skill-tag {
-  padding: 8px 16px;
-  background: rgba(96, 165, 250, 0.1);
-  border: 1px solid rgba(96, 165, 250, 0.3);
-  border-radius: 20px;
-  color: #E5E7EB;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.skill-tag:hover {
-  background: rgba(96, 165, 250, 0.2);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.2);
-}
-
-@media only screen and (max-width: 968px) {
-  .about-main {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3em;
-  }
-
-  .about-image {
-    flex: none;
-    max-width: 300px;
-    width: 100%;
-  }
-
-  .profile {
-    min-height: auto;
-    height: auto;
-    max-width: 300px;
-  }
-
-  .text h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .about-content p {
-    text-align: center;
-  }
-
-  .skills-groups {
-    align-items: center;
-  }
-
-  .skills-container {
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .text h2 {
-    font-size: 2.2rem;
-  }
-
-  .about-content p {
-    font-size: 1rem;
-  }
-
-  .skill-tag {
-    font-size: 0.8rem;
-  }
-}
-
-#works {
-  padding: 100px 0;
-  background: linear-gradient(to bottom, #1F2937, #2C3544);
-}
-
-.works-container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.works-container h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #E5E7EB;
-  position: relative;
-}
-
-.works-container h2 span {
-  background: linear-gradient(to right, #60A5FA, #E5E7EB);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
-  padding: 20px 0;
-}
-
-.project {
-  background: rgba(44, 53, 68, 0.6);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(96, 165, 250, 0.1);
-}
-
-.project:hover {
-  transform: translateY(-8px);
-  background: rgba(44, 53, 68, 0.9);
-  border-color: rgba(96, 165, 250, 0.3);
-}
-
-.project-content {
-  padding: 2rem;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.project-header i {
-  font-size: 2rem;
-  color: #60A5FA;
-}
-
-.project-links a {
-  color: #E5E7EB;
-  font-size: 1.2rem;
-  margin-left: 1rem;
-  transition: all 0.3s ease;
-}
-
-.project-links a:hover {
-  color: #60A5FA;
-}
-
-.project h3 {
-  color: #E5E7EB;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.project p {
-  color: #9CA3AF;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.project-tech span {
-  font-size: 0.8rem;
-  color: #60A5FA;
-  background: rgba(96, 165, 250, 0.1);
-  padding: 4px 12px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.project-tech span:hover {
-  background: rgba(96, 165, 250, 0.2);
-  transform: translateY(-2px);
-}
-
-.login-info {
-  margin-top: 1.5rem;
-}
-
-.login-btn {
-  background: transparent;
-  color: #60A5FA;
-  border: 1px solid #60A5FA;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.login-btn:hover {
-  background: rgba(96, 165, 250, 0.1);
-}
-
-.login-details {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: rgba(96, 165, 250, 0.05);
-  border-radius: 6px;
-  border: 1px solid rgba(96, 165, 250, 0.1);
-}
-
-.login-group {
-  margin-bottom: 0.8rem;
-}
-
-.login-group p {
-  color: #E5E7EB;
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.login-group p i {
-  color: #60A5FA;
-}
-
-@media (max-width: 768px) {
-  .works-container h2 {
-    font-size: 2.2rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-content {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .works-container h2 {
-    font-size: 1.8rem;
-  }
-
-  .project h3 {
-    font-size: 1.2rem;
-  }
-
-  .project p {
-    font-size: 0.9rem;
-  }
-}
-
-#services{
-    width: 100%;
-    padding: 80px 0;
-    background: linear-gradient(135deg, rgba(44, 53, 68, 0.95), rgba(31, 41, 55, 0.95));
-  }
-  .service {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .service h2 {
-    text-align: center;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-bottom: 2em;
-    background: linear-gradient(to right, #60A5FA, #E5E7EB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-  }
-  .service h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(to right, #60A5FA, #E5E7EB);
-    border-radius: 2px;
-  }
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-  }
-  .skill-card {
-    background: rgba(96, 165, 250, 0.1);
-    border: 1px solid rgba(96, 165, 250, 0.2);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .skill-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(96, 165, 250, 0.1), rgba(229, 231, 235, 0.1));
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-  .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: rgba(96, 165, 250, 0.4);
-  }
-  .skill-card:hover::before {
-    opacity: 1;
-  }
-  .skill-card i {
-    font-size: 2.5rem;
-    color: #60A5FA;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-  }
-  .skill-card:hover i {
-    transform: scale(1.1);
-    color: #E5E7EB;
-  }
-  .skill-card h3 {
-    font-size: 1.2rem;
-    color: #E5E7EB;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  .skill-card p {
-    color: #E5E7EB;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    opacity: 0.8;
-  }
-  @media only screen and (max-width: 768px) {
-    .service h2 {
-      font-size: 2.2rem;
-    }
-    .skills-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    .skill-card {
-      padding: 1.5rem;
-    }
-  }
-  @media only screen and (max-width: 480px) {
-    .service h2 {
-      font-size: 1.8rem;
-    }
-    .skill-card i {
-      font-size: 2rem;
-    }
-    .skill-card h3 {
-      font-size: 1.1rem;
-    }
-    .skill-card p {
-      font-size: 0.85rem;
-    }
-  }
-  .design2{
-    height: 100% auto;
-    width: 100%;
-    max-width: 500px;
-  }
-  .service h2{
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    font-weight: 600;
-    color: #fff;
-    margin-top: 0.5em;
-  }
-  .service p{
-    margin-top: 1em;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-
-  #certificates{
-    width: 95%;
-    margin: 95px auto;
-  }
-  .certificate{
-    text-align: center;
-  }
-  .cont {
-    display: none;
-    position: relative;
-  }
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(45deg, #60A5FA, #E5E7EB);
-    border: none;
-    border-radius: 50%;
-    font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    color: #1F2937;
-    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-  }
-
-  .close-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5);
-    background: linear-gradient(45deg, #E5E7EB, #60A5FA);
-  }
-
-  .show-image {
-    display: block;
-  }
-
-  .hide-button {
-    display: none;
-  }
-  .error {
-    color: red;
-    font-weight: bold;
-  }
-  .cont h1{
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-    font-weight: 600;
-    margin-bottom: 1.4em;
-  }
-  .ficate{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-  }
-  .ficate img{
-    height: auto;
-    width: 100%;
-    max-width: 300px; /* Ensure all images have the same max-width */
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  .ficate img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
-  }
-  .ficate .screen1{
-    border-radius: 1px;
-  }
-  .certon button{
-    padding: 15px 50px;
-    letter-spacing: 3px;
-    font-weight: 500;
-    background: linear-gradient(45deg, #60A5FA, #E5E7EB);
-    border: none;
-    cursor: pointer;
-    position: relative;
-    border-radius: 8px;
-    color: #1F2937;
-    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-    transition: all 0.3s ease;
-    animation: pulseButton 2s infinite;
-  }
-  .certon button::after {
-    content: "👆";
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 20px;
-    animation: bounce 1s infinite;
-  }
-  .certon button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.5);
-    background: linear-gradient(45deg, #E5E7EB, #60A5FA);
-  }
-  @keyframes pulseButton {
-    0% {
-      box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.4);
-    }
-    70% {
-      box-shadow: 0 0 0 10px rgba(96, 165, 250, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(96, 165, 250, 0);
-    }
-  }
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-  }
-
-  #footer{
-    width: 100%;
-    margin: 100px auto;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    
-  }
-  .footer{
-    background: linear-gradient(to right, #2C3544, #1F2937);
-    padding: 60px 0 20px;
-    position: relative;
-  }
-  .footer-content {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  .footer-left {
-    flex: 1;
-  }
-  .footer-left h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    background: linear-gradient(to right, #60A5FA, #E5E7EB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .footer-left p {
-    color: #E5E7EB;
-    margin-bottom: 25px;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .contact-info {
-    margin-bottom: 30px;
-  }
-  .contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-  }
-  .contact-item:hover {
-    transform: translateX(10px);
-  }
-  .contact-item i {
-    color: #60A5FA;
-    margin-right: 15px;
-    font-size: 1.2rem;
-  }
-  .contact-item p {
-    margin: 0;
-    color: #E5E7EB;
-  }
-  .social-footer {
-    display: flex;
-    gap: 15px;
-  }
-  .social-footer a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(96, 165, 250, 0.1);
-    color: #60A5FA;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-  }
-  .social-footer a:hover {
-    background: #60A5FA;
-    color: #fff;
-    transform: translateY(-5px);
-  }
-  .footer-right {
-    flex: 0.7;
-  }
-  .footer-right h2 {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #60A5FA, #E5E7EB);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .footer-right ul {
-    list-style: none;
-    padding: 0;
-  }
-  .footer-right ul li {
-    margin-bottom: 12px;
-  }
-  .footer-right ul li a {
-    color: #E5E7EB;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    position: relative;
-  }
-  .footer-right ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background: #60A5FA;
-    transition: width 0.3s ease;
-  }
-  .footer-right ul li a:hover {
-    color: #60A5FA;
-    transform: translateX(10px);
-  }
-  .footer-right ul li a:hover::after {
-    width: 100%;
-  }
-  .footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(229, 231, 235, 0.1);
-  }
-  .footer-bottom p {
-    color: #E5E7EB;
-    font-size: 0.9rem;
-  }
-  @media only screen and (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      text-align: center;
-    }
-    .contact-item {
-      justify-content: center;
-    }
-    .social-footer {
-      justify-content: center;
-    }
-    .footer-right ul li a:hover {
-      transform: translateX(0);
-    }
-  }
-
-  @media only screen and (max-width:1000px){
-    .box{
-      padding: 50px;
-      width: 20%;
-    }
-    .tools{
-      gap: 0.3em;
-    }
-    .ficate img{
-      max-width: 390px;
-    }
-    .timeline{
-      overflow-x: hidden;
-    }
-  }
-
-  @media only screen and (max-width:900px){
-    #home{
-      flex-direction: column;
-    }
-    .about{
-      flex-direction: column-reverse;
-    }
-    .text{
-      text-align: center;
-    }
-    #services{
-      flex-direction: column;
-    }
-    .service{
-      text-align: center;
-    }
-    .boxes{
-      flex-direction: column;
-    }
-    .box{
-      padding: 70px;
-      width: 40%;
-    }
-    .ficate{
-      flex-direction: column;
-    }
-  }
-
-  @media only screen and (max-width:590px){
-    .hero-title h2{
-      font-size: 3.5rem;
-      width: 90%;
-    }
-    .hero-title .textp{
-      font-size: 1rem;
-    }
-    .hero-title .textp2{
-      font-size: 1rem;
-    }
-    .ficate img{
-      max-width: 350px;
-    }
-  }
-
-  @media only screen and (max-width:515px){
-    .hero-title h2{
-      font-size: 2.8rem;
-    }
-    .box{
-      padding: 40px;
-      width: 50%;
-    }
-    .tools{
-      text-align: center;
-    }
-    .text4{
-      flex-direction: column;
-      text-align: center;
-    }
-    .touch{
-      text-align: center;
-    }
-  }
-
-  @media only screen and (max-width:430px){
-    .hero-title h2{
-      font-size: 2.4rem;
-      width: 100%;
-    }
-    .textp{
-      width: 80%;
-    }
-    .profile{
-      max-width: 250px;
-    }
-    .box{
-      padding: 50px;
-      width: 60%;
-    }
-  }
-
-  @media only screen and (max-width:400px){
-    .ficate img{
-      max-width: 300;
-    }
-  }
-  @media only screen and (max-width:370px){
-    .ficate img{
-      max-width: 250;
-    }
-  }
-
-
-.timeline,
-.timeline * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.timeline{
-    background: transparent;
-    padding-bottom: 50px;
-    color: #000;
-}
-
-.timeline ul li {
-  list-style-type: none;
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-  background: linear-gradient(180deg, #60A5FA, #E5E7EB);
-}
-.timeline ul li::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) rotate(45deg);
-  width: 20px;
-  height: 20px;
-  z-index: 2;
-  background: linear-gradient(45deg, #60A5FA, #E5E7EB);
-  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
-}
-.timeline ul li div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  padding: 20px;
-  background: rgba(44, 53, 68, 0.9);
-  border: 2px solid;
-  border-image: linear-gradient(45deg, #60A5FA, #E5E7EB) 1;
-  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  transition: all 0.4s ease;
-}
-.timeline ul li div time {
-  position: absolute;
-  background: linear-gradient(45deg, #60A5FA, #E5E7EB);
-  color: #1F2937;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(96, 165, 250, 0.3);
-  width: 80px;
-  height: 30px;
-  top: -15px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 2px;
-}
-.timeline ul li div div {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.timeline ul li div div p {
-  text-align: center;
-}
-.timeline ul li div .discovery {
-  margin-right: 10px;
-}
-.timeline ul li:nth-of-type(odd) > div {
-  left: 45px;
-}
-.timeline ul li:nth-of-type(even) > div {
-  left: -439px;
-}
-
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-.timeline ul li:nth-of-type(odd) div {
-  transform: translate3d(100px, -10px, 0) rotate(10deg);
-}
-.timeline ul li:nth-of-type(even) div {
-  transform: translate3d(-100px, -10px, 0) rotate(10deg);
-}
-.timeline ul li.in-view div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
-@media only screen and (max-width:1500px){
-  .timeline ul li div div {
-    width: 80%;
-    margin: 10px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .timeline ul li div {
-    width: 250px;
-    flex-direction: column;
-  }
-  .timeline ul li div div {
-    width: 80%;
-    margin: 10px;
-  }
-  .timeline ul li:nth-of-type(even) > div {
-    left: -289px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-  .timeline ul li:nth-of-type(even) > div {
-    left: 45px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-    .timeline ul li div {
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.5s ease-in-out;
-      transform: scale(0.5);
-    }
-  
-    .timeline ul li:nth-of-type(odd) div {
-      transform: translate3d(100px, -10px, 0) scale(0.5);
-    }
-  
-    .timeline ul li:nth-of-type(even) div {
-      transform: translate3d(-100px, -10px, 0) scale(0.5);
-    }
-  
-    .timeline ul li.in-view div {
-      transform: none;
-      visibility: visible;
-      opacity: 1;
-      transition: all 0.5s ease-in-out;
-      transform: scale(1);
-    }
-  }
-.programming h1{
-  font-size: 1.5rem;
-  letter-spacing: 0.7px;
-  margin-bottom: 0.3em;
-  color: #E5E7EB;
-}
-.programming p{
-  letter-spacing: 1px;
-  color: #E5E7EB;
-}
-.programming h2{
-  color: #E5E7EB;
-}
-
-#arrow-container {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9999;
-}
-
-#scroll-top {
-  display: none;
-}
-
-#scroll-top img {
-  width: 40px;
-  height: 40px;
-  opacity: 0.7;
-  border-radius: 50px;
-}
-
-#scroll-top:hover img {
-  opacity: 1;
-}
-
-
-.button {
-  --color: #fff;
-  padding: 12px 32px;
-  background: var(--accent-color);
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 400;
-  font-size: 0.9rem;
-  border: none;
-  font-family: inherit;
-  text-transform: uppercase;
-  color: var(--color);
-  z-index: 1;
-}
-
-.button {
-  color: #fff !important;
-}
-
-.button::before, .button::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  background-color: var(--color);
-  transition: 1s ease;
-}
-
-.button::before {
-  top: -1em;
-  left: -1em;
-}
-
-.button::after {
-  left: calc(100% + 1em);
-  top: calc(100% + 1em);
-}
-
-.button:hover::before, .button:hover::after {
-  height: 410px;
-  width: 410px;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  background: var(--highlight);
-}
-
-.button:active {
-  filter: brightness(.8);
-}
-
-.timeline ul li div:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
-  transition: all 0.3s ease;
-}
-
-.visit {
-  margin-bottom: 0;
-}
-
-.credentials-container {
-  margin: 0;
-  margin-bottom: 15px;
-  margin-top: -20px;
-  text-align: center;
-  width: 100%;
-  display: block;
-}
-
-.credentials-btn {
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: -15px;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  background: linear-gradient(45deg, #60A5FA, #E5E7EB);
-  color: #1F2937;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.credentials-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.5);
-  background: linear-gradient(45deg, #E5E7EB, #60A5FA);
-}
-
-.credentials-btn::after {
-  content: "🔑";
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  font-size: 16px;
-  animation: float 2s infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(-5px) rotate(10deg);
-  }
-}
-
-.credentials-info {
-  margin-top: 10px;
-  padding: 15px;
-  background: rgba(96, 165, 250, 0.1);
-  border-radius: 8px;
-  border: 1px solid rgba(96, 165, 250, 0.2);
-  transform-origin: top;
-  animation: slideDown 0.3s ease-out forwards;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  to {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-
-.credential-group {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 6px;
-  background: rgba(96, 165, 250, 0.05);
-  transition: all 0.3s ease;
-}
-
-.credential-group:hover {
-  background: rgba(96, 165, 250, 0.1);
-  transform: translateX(5px);
-}
-
-.credential-group h3 {
-  color: #60A5FA;
-  margin-bottom: 5px;
-  font-size: 1.1em;
-  font-weight: 600;
-}
-
-.credential-group p {
-  margin: 5px 0;
-  color: #E5E7EB;
-  font-size: 0.9em;
-  transition: all 0.3s ease;
-}
-
-.credential-group p:hover {
-  color: #fff;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.nav-menu ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.nav-menu a {
-    color: #E5E7EB;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(to right, #60A5FA, #E5E7EB);
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-.nav-menu a:hover {
-    color: #60A5FA;
-}
-
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .header-container {
-        justify-content: center;
-    }
-}
-
-.cursor-skill {
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(229, 231, 235, 0.2));
-  border: 1px solid rgba(96, 165, 250, 0.5);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cursor-skill i {
-  font-size: 1rem;
-  color: #60A5FA;
-}
-
-.cursor-skill:hover {
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.3), rgba(229, 231, 235, 0.3));
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
-}
-
-/* Modal styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
-}
-
-.modal-content {
-  margin: 15% auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#07090e" />
+  <title>Carlos Miguel Ochia | QA Engineer</title>
+  <meta name="description" content="Carlos Miguel Ochia — QA Engineer specializing in manual testing, automation testing, and release validation." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="playful.css" />
+  <script>
+    /* Dark is the default; apply a saved choice before first paint */
+    (function () {
+      var d = document.documentElement, t = "dark";
+      d.classList.add("js");
+      try { if (localStorage.getItem("cmo-theme") === "light") t = "light"; } catch (e) {}
+      d.setAttribute("data-theme", t);
+    })();
+  </script>
 </head>
 <body>
-  
-  <header>
-    <div class="header-container">
-        <div id="logo" class="logo">
-            <h2><span>CM</span>O.</h2>
-        </div>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#works">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-        </nav>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <p class="preloader__logo"><span>CM</span>O.</p>
+      <p class="preloader__label">Carlos Miguel Ochia · QA Engineer Portfolio</p>
+      <p class="preloader__count"><span id="loaderCount">0</span>%</p>
+      <div class="preloader__bar"><span id="loaderBar"></span></div>
+      <p class="preloader__status" id="loaderStatus">Initializing test environment…</p>
+    </div>
+  </div>
+
+  <!-- Reading progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- Custom cursor (mouse only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo" aria-label="Carlos Miguel Ochia — home"><span>CM</span>O.</a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#works">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <span class="nav__pill" id="navPill" aria-hidden="true"></span>
+    </nav>
+
+    <div class="nav__right">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch theme">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+        <i class="fas fa-sun" aria-hidden="true"></i>
+      </button>
+      <a href="#contact" class="nav__cta magnetic">Contact <i class="fas fa-arrow-right"></i></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
-    <section id="home">
-        <div class="hero-title">
-            <div class="heading-container">
-                <p class="textp2">Hello, There</p>
-                <span class="waving-hand">👋</span>
-              </div>
-              <h2>I'm Carlos Miguel Ochia</h2>
-              <p class="textp">
-                QA Engineer specializing in manual testing, automation testing, and release validation.<br>
-                Open to QA Engineer / Software Tester opportunities
-              </p>
-              <div class="projects">
-                <a href="#works"><button>PROJECTS</button></a>
-              </div>
-              <div class="social">
-                <a href="https://www.facebook.com/carlos.ochia.56/"><i class="fa-brands fa-facebook-square"></i></a>
-                <a href="https://github.com/ochiaCarlosMiguel"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/carlos-miguel-ochia-367072279/"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
+  <!-- Mobile full-screen menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Mobile">
+      <a href="#home"><small>01</small>Home</a>
+      <a href="#about"><small>02</small>About</a>
+      <a href="#experience"><small>03</small>Experience</a>
+      <a href="#skills"><small>04</small>Skills</a>
+      <a href="#works"><small>05</small>Projects</a>
+      <a href="#certificates"><small>06</small>Certificates</a>
+      <a href="#contact"><small>07</small>Contact</a>
+      <a href="Carlos-Miguel-Ochia-Resume.pdf" download="Carlos-Miguel-Ochia-Resume.pdf"><small>CV</small>Download CV</a>
+    </nav>
+    <div class="mobile-menu__social">
+      <a href="https://www.facebook.com/carlos.ochia.56/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://github.com/ochiaCarlosMiguel" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/carlos-miguel-ochia-367072279/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="hero__hello intro" style="--d:0">Hello, There <span class="wave" aria-hidden="true">👋</span></p>
+
+          <h1 class="hero__title">
+            <span class="hero__im intro" style="--d:1">I'm</span>
+            <span class="split" data-split>Carlos Miguel</span>
+            <span class="split split--accent" data-split>Ochia</span>
+          </h1>
+
+          <p class="hero__role intro" style="--d:6">
+            QA Engineer <span class="hero__sep">/</span>
+            <span class="rotator" id="rotator" aria-live="polite">
+              <span class="is-active">Manual Testing</span>
+              <span>Automation Testing</span>
+              <span>Release Validation</span>
+            </span>
+          </p>
+
+          <p class="hero__desc intro" style="--d:7">
+            QA Engineer specializing in manual testing, automation testing, and release validation.
+            <strong>Open to QA Engineer / Software Tester opportunities.</strong>
+          </p>
+
+          <div class="hero__actions intro" style="--d:8">
+            <a href="#works" class="btn btn--primary magnetic"><span>View Projects</span><i class="fas fa-arrow-down"></i></a>
+            <a href="Carlos-Miguel-Ochia-Resume.pdf" class="btn btn--ghost magnetic" download="Carlos-Miguel-Ochia-Resume.pdf"><span>Download CV</span><i class="fas fa-file-arrow-down"></i></a>
+          </div>
+
+          <div class="social intro" style="--d:9">
+            <a href="https://www.facebook.com/carlos.ochia.56/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/ochiaCarlosMiguel" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-miguel-ochia-367072279/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
-        <img class="designstrip" src="designstripe-facebook-post-removebg-preview.png">
+
+        <div class="hero__visual intro" style="--d:4">
+          <div class="orb">
+            <svg class="orb__text" viewBox="0 0 300 300" aria-hidden="true">
+              <defs>
+                <path id="orbCircle" d="M150,150 m-128,0 a128,128 0 1,1 256,0 a128,128 0 1,1 -256,0" />
+              </defs>
+              <text><textPath href="#orbCircle">QA ENGINEER ✦ MANUAL TESTING ✦ AUTOMATION ✦ RELEASE VALIDATION ✦</textPath></text>
+            </svg>
+            <div class="orb__ring" aria-hidden="true"></div>
+            <div class="orb__photo">
+              <img src="profile-web.jpg" alt="Portrait of Carlos Miguel Ochia" width="720" height="720" fetchpriority="high" />
+            </div>
+            <span class="orb__chip orb__chip--a" aria-hidden="true"><i class="fas fa-robot"></i> AHQ Automation</span>
+            <span class="orb__chip orb__chip--b" aria-hidden="true"><i class="fas fa-check"></i> Regression passed</span>
+            <span class="orb__chip orb__chip--c" aria-hidden="true"><i class="fas fa-bug"></i> Defect → RCA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <dl class="stats">
+          <div class="stat"><dt>Projects</dt><dd><span data-count="4">0</span></dd></div>
+          <div class="stat"><dt>Certificates</dt><dd><span data-count="9">0</span></dd></div>
+          <div class="stat"><dt>Testing types</dt><dd><span data-count="9">0</span>+</dd></div>
+          <div class="stat"><dt>Leadership roles</dt><dd><span data-count="2">0</span></dd></div>
+        </dl>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
     </section>
 
-
-    <section id="about">
-      <div class="about">
-        <div class="about-main">
-          <div class="about-image">
-            <img class="profile" src="profiles.png" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
-            <div class="image-backdrop"></div>
-          </div>
-          <div class="text">
-            <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">About <span>Me</span></h2>
-            <div class="about-content" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800">
-              <p>I am a Bachelor of Industrial Technology graduate from Bulacan State University, majoring in Computer Technology. During my academic journey, I served as Associate Director for Communication (2022) and Director for Logistics (2023) at SPICE-CIT, where I developed strong leadership and organizational skills.</p>
-              <p>I have professional experience as a Quality Assurance Engineer, where I performed manual and automated testing across multiple environments, including regression, sanity, smoke, functional, and end-to-end testing. I was also involved in defect tracking, root cause analysis, release validation, and client support activities, ensuring timely issue resolution and quality delivery.</p>
-              <p>In addition, I worked as a Freelance Web Developer, building web-based systems using AI-assisted tools, with a focus on functionality, responsive design, and UI/UX implementation.</p>
-              <p>I am passionate about Software Quality Assurance, particularly in manual testing, automated testing, regression testing, and improving software reliability through structured QA processes.</p>
-            </div>
-          </div>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__row">
+        <div class="marquee__track">
+          <span>Manual Testing</span><i>✦</i><span>Automation (AHQ)</span><i>✦</i><span>Regression</span><i>✦</i>
+          <span>Smoke</span><i>✦</i><span>Sanity</span><i>✦</i><span>End-to-End</span><i>✦</i><span>API Testing</span><i>✦</i>
+          <span>Root Cause Analysis</span><i>✦</i><span>Release Validation</span><i>✦</i>
+          <span>Agile</span><i>✦</i><span>Scrum</span><i>✦</i>
         </div>
-        <div class="skills-groups" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
-            <div class="skill-group">
-              <p class="skill-group-label">Quality Assurance & Testing</p>
-              <div class="skills-container">
-                <div class="skill-tag"><i class="fas fa-hand-pointer"></i> Manual Testing</div>
-                <div class="skill-tag"><i class="fas fa-desktop"></i> UI Testing</div>
-                <div class="skill-tag"><i class="fas fa-robot"></i> Automation Testing (AHQ Tools)</div>
-                <div class="skill-tag"><i class="fas fa-redo"></i> Regression Testing</div>
-                <div class="skill-tag"><i class="fas fa-fire"></i> Smoke Testing</div>
-                <div class="skill-tag"><i class="fas fa-check-double"></i> Sanity Testing</div>
-                <div class="skill-tag"><i class="fas fa-tasks"></i> Functional Testing</div>
-                <div class="skill-tag"><i class="fas fa-route"></i> End-to-End Testing</div>
-                <div class="skill-tag"><i class="fas fa-search"></i> Exploratory Testing</div>
-                <div class="skill-tag"><i class="fas fa-plug"></i> API Testing</div>
-                <div class="skill-tag"><i class="fas fa-clipboard-list"></i> Test Case Creation</div>
-                <div class="skill-tag"><i class="fas fa-bug"></i> Bug Tracking</div>
-                <div class="skill-tag"><i class="fas fa-file-alt"></i> Defect Reporting</div>
-                <div class="skill-tag"><i class="fas fa-microscope"></i> Defect Analysis & RCA</div>
-                <div class="skill-tag"><i class="fas fa-book"></i> QA Documentation</div>
-                <div class="skill-tag"><i class="fas fa-user-check"></i> UAT Support</div>
-                <div class="skill-tag"><i class="fas fa-chart-line"></i> Test Reporting</div>
-              </div>
-            </div>
-            <div class="skill-group">
-              <p class="skill-group-label">Development & Tools</p>
-              <div class="skills-container">
-                <div class="skill-tag"><i class="fas fa-code"></i> Vibe Coding</div>
-                <div class="skill-tag"><i class="fas fa-database"></i> AI-Powered PHP Development</div>
-                <div class="skill-tag"><i class="fas fa-paint-brush"></i> Figma (UI/UX)</div>
-                <div class="skill-tag cursor-skill"><i class="fas fa-robot"></i> Cursor AI</div>
-                <div class="skill-tag"><i class="fas fa-file-word"></i> Microsoft Word & Excel</div>
-              </div>
-            </div>
-            <div class="skill-group">
-              <p class="skill-group-label">Soft Skills</p>
-              <div class="skills-container">
-                <div class="skill-tag"><i class="fas fa-random"></i> Adaptability</div>
-                <div class="skill-tag"><i class="fas fa-users"></i> Teamwork</div>
-                <div class="skill-tag"><i class="fas fa-comments"></i> Communication</div>
-                <div class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="marquee__row marquee__row--reverse">
+        <div class="marquee__track">
+          <span>Test Cases</span><i>✦</i><span>Bug Tracking</span><i>✦</i><span>UAT Support</span><i>✦</i>
+          <span>GitHub</span><i>✦</i><span>Staging Deployment</span><i>✦</i><span>Cursor AI</span><i>✦</i>
+          <span>PHP</span><i>✦</i><span>Figma</span><i>✦</i><span>QA Documentation</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT (BENTO) ============ -->
+    <section class="section" id="about">
+      <span class="bg-word" aria-hidden="true">ABOUT</span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">01 — About</p>
+          <h2 class="section-title">About <em>Me</em></h2>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile--story reveal">
+            <span class="tile__tag"><i class="fas fa-user"></i> Story</span>
+            <p class="lead">
+              I am a Bachelor of Industrial Technology graduate from Bulacan State University, majoring in Computer
+              Technology. During my academic journey, I served as Associate Director for Communication (2022) and
+              Director for Logistics (2023) at SPICE-CIT, where I developed strong leadership and organizational skills.
+            </p>
+            <p>
+              I have professional experience as a Quality Assurance Engineer, where I performed manual and automated
+              testing across multiple environments, including regression, sanity, smoke, functional, and end-to-end
+              testing. I was also involved in defect tracking, root cause analysis, release validation, and client
+              support activities, ensuring timely issue resolution and quality delivery.
+            </p>
+            <p>
+              In addition, I worked as a Freelance Web Developer, building web-based systems using AI-assisted tools,
+              with a focus on functionality, responsive design, and UI/UX implementation.
+            </p>
+            <p>
+              I am passionate about Software Quality Assurance, particularly in manual testing, automated testing,
+              regression testing, and improving software reliability through structured QA processes.
+            </p>
+          </article>
+
+          <article class="tile tile--edu reveal" data-reveal="right">
+            <span class="tile__icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="tile__tag">Education</span>
+            <h3>Bachelor of Industrial Technology</h3>
+            <p>Major in Computer Technology<br /><strong>Bulacan State University</strong><br />August 2020 – July 2025</p>
+            <p class="badge-line"><i class="fas fa-star"></i> Dean's Lister</p>
+          </article>
+
+          <article class="tile tile--lead reveal" data-reveal="right">
+            <span class="tile__icon"><i class="fas fa-people-group"></i></span>
+            <span class="tile__tag">Leadership · SPICE-CIT</span>
+            <ul class="mini-timeline">
+              <li><b>2022</b> Associate Director for Communication</li>
+              <li><b>2023</b> Director for Logistics</li>
+            </ul>
+          </article>
+
+          <article class="tile tile--focus reveal">
+            <span class="tile__icon"><i class="fas fa-crosshairs"></i></span>
+            <span class="tile__tag">QA Focus</span>
+            <ul class="focus-list">
+              <li>Manual testing</li>
+              <li>Automated testing</li>
+              <li>Regression testing</li>
+              <li>Software reliability</li>
+            </ul>
+          </article>
+
+          <article class="tile tile--free reveal">
+            <span class="tile__icon"><i class="fas fa-laptop-code"></i></span>
+            <span class="tile__tag">Freelance</span>
+            <h3>AI-assisted web systems</h3>
+            <p>Functionality, responsive design, and UI/UX implementation.</p>
+          </article>
+        </div>
       </div>
     </section>
 
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--alt" id="experience">
+      <span class="bg-word" aria-hidden="true">WORK</span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 — Experience</p>
+          <h2 class="section-title">Professional <em>Experience</em></h2>
+        </header>
 
-    <section id="services">
-      <div class="service">
-        <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">Core <span>Expertise</span></h2>
-        <div class="skills-grid">
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="550" data-aos-duration="800">
-            <i class="fas fa-vial"></i>
-            <h3>Quality Assurance & Testing</h3>
+        <div class="exp">
+          <!-- AHQ -->
+          <article class="job reveal">
+            <div class="job__rail" aria-hidden="true"><span class="job__dot"></span></div>
+            <div class="job__card spotlight">
+              <header class="job__head">
+                <div>
+                  <h3 class="job__title">QA Engineer / QA Tester</h3>
+                  <p class="job__company">AutomationHQ (AHQ)</p>
+                  <p class="job__meta"><i class="fas fa-location-dot"></i> Ontario, Canada</p>
+                </div>
+                <span class="job__period job__period--now"><span class="live-badge__dot"></span>May 2025 – Present</span>
+              </header>
+
+              <div class="tabs" data-tabs>
+                <div class="tabs__list" role="tablist" aria-label="AHQ responsibilities">
+                  <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Manual Testing &amp; QA</button>
+                  <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Test Automation</button>
+                  <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Defect Management</button>
+                  <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Deployment &amp; Process</button>
+                  <button role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1">Demos &amp; Knowledge Sharing</button>
+                  <span class="tabs__ink" aria-hidden="true"></span>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="p1" aria-labelledby="t1">
+                  <ul class="arrow-list">
+                    <li>Created, reviewed, and executed test cases to verify application functionality and ensure that system requirements were met.</li>
+                    <li>Performed manual testing, sanity testing, and regression testing to identify defects and validate application stability.</li>
+                    <li>Prepared test scenarios and documented testing results.</li>
+                    <li>Performed retesting to verify whether reported defects had been properly resolved.</li>
+                  </ul>
+                </div>
+                <div class="tabs__panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+                  <ul class="arrow-list">
+                    <li>Created and executed automated test scripts using AHQ's No-Code Automation Platform.</li>
+                    <li>Prepared test scripts for different application modules and functionalities.</li>
+                    <li>Monitored automated test executions and analyzed results to identify failures and unexpected behavior.</li>
+                    <li>Investigated failed test scripts, identified possible root causes, and shared findings with the team.</li>
+                    <li>Maintained and updated test scripts to ensure their accuracy and reliability.</li>
+                  </ul>
+                </div>
+                <div class="tabs__panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+                  <ul class="arrow-list">
+                    <li>Identified, documented, and reported software issues through clear and detailed issue tickets.</li>
+                    <li>Provided steps to reproduce, expected results, and actual results when reporting defects.</li>
+                    <li>Investigated execution failures and performed root cause analysis.</li>
+                    <li>Collaborated with developers and QA team members to discuss defects, testing progress, and possible solutions.</li>
+                    <li>Communicated testing findings, blockers, and issues to the team.</li>
+                  </ul>
+                </div>
+                <div class="tabs__panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+                  <ul class="arrow-list">
+                    <li>Assisted in deploying applications to the Staging Environment using GitHub.</li>
+                    <li>Deploy the client's ephemeral environment (Terraform) every week for testing.</li>
+                    <li>Verified application functionality after deployments and updates.</li>
+                    <li>Participated in testing activities throughout the SDLC and STLC.</li>
+                    <li>Worked within an Agile and Scrum environment, collaborating with team members throughout development and testing activities.</li>
+                  </ul>
+                </div>
+                <div class="tabs__panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+                  <ul class="arrow-list">
+                    <li>Conducted website and application demonstrations to showcase system functionalities, features, and workflows.</li>
+                    <li>Presented application modules and explained their functionalities to team members.</li>
+                    <li>Prepared and delivered QA learning sessions to share knowledge about software testing concepts, methodologies, and best practices.</li>
+                    <li>Facilitated peer learning and knowledge-sharing discussions about different QA topics.</li>
+                    <li>Explained technical concepts in a clear and understandable manner.</li>
+                    <li>Participated in technical presentations and team learning activities.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <footer class="job__tools">
+                <span>Tools Used</span>
+                <ul class="chips">
+                  <li><i class="fas fa-robot"></i> AHQ No-Code Automation Platform</li>
+                  <li><i class="fa-brands fa-github"></i> GitHub</li>
+                </ul>
+              </footer>
+            </div>
+          </article>
+
+          <!-- AHQ Internship -->
+          <article class="job reveal">
+            <div class="job__rail" aria-hidden="true"><span class="job__dot"></span></div>
+            <div class="job__card spotlight">
+              <header class="job__head">
+                <div>
+                  <h3 class="job__title">QA Intern</h3>
+                  <p class="job__company">AutomationHQ (AHQ)</p>
+                  <p class="job__meta"><i class="fas fa-location-dot"></i> Remote</p>
+                </div>
+                <span class="job__period">January 27 – May 12, 2025</span>
+              </header>
+              <ul class="arrow-list">
+                <li>Performed manual testing activities including regression, UI, API, functional, and exploratory testing across multiple environments.</li>
+                <li>Created and maintained test scripts while documenting and tracking defects using structured QA workflows.</li>
+                <li>Logged and managed bug tickets to ensure proper documentation and follow-through until resolution.</li>
+                <li>Supported cross-functional collaboration with marketing and design teams and improved proficiency in Figma for UI-related QA tasks.</li>
+                <li>Assisted in validating application functionality and ensuring early detection of defects during development cycles.</li>
+              </ul>
+              <footer class="job__tools">
+                <span>Recognition</span>
+                <button type="button" class="cert-link" data-cert-index="0"><i class="fas fa-award"></i> View internship completion certificate</button>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Freelance -->
+          <article class="job reveal">
+            <div class="job__rail" aria-hidden="true"><span class="job__dot"></span></div>
+            <div class="job__card spotlight">
+              <header class="job__head">
+                <div>
+                  <h3 class="job__title">Freelance Web Developer</h3>
+                  <p class="job__company">Remote</p>
+                </div>
+                <span class="job__period">February 2025 – May 2025</span>
+              </header>
+              <ul class="arrow-list">
+                <li>Developed capstone and academic web-based systems using AI-assisted tools (Cursor AI), building full-stack features with HTML, CSS, JavaScript, PHP, and MySQL.</li>
+                <li>Designed responsive UI/UX, implemented system functionality based on requirements, and supported deployment, testing, and iterative improvements for usability and performance.</li>
+              </ul>
+              <footer class="job__tools">
+                <span>Stack</span>
+                <ul class="chips">
+                  <li><i class="fas fa-robot"></i> Cursor AI</li>
+                  <li><i class="fas fa-database"></i> AI-Powered PHP Development</li>
+                  <li><i class="fas fa-paint-brush"></i> Figma</li>
+                </ul>
+              </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <span class="bg-word" aria-hidden="true">SKILLS</span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">03 — Skills</p>
+          <h2 class="section-title">Skills &amp; <em>Tools</em></h2>
+        </header>
+
+        <div class="skills-layout">
+          <div class="skill-groups">
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title"><i class="fas fa-vial"></i> Quality Assurance &amp; Testing</h3>
+              <ul class="chips chips--pop">
+                <li><i class="fas fa-hand-pointer"></i> Manual Testing</li>
+                <li><i class="fas fa-desktop"></i> UI Testing</li>
+                <li><i class="fas fa-robot"></i> Automation Testing (AHQ Tools)</li>
+                <li><i class="fas fa-redo"></i> Regression Testing</li>
+                <li><i class="fas fa-fire"></i> Smoke Testing</li>
+                <li><i class="fas fa-check-double"></i> Sanity Testing</li>
+                <li><i class="fas fa-tasks"></i> Functional Testing</li>
+                <li><i class="fas fa-route"></i> End-to-End Testing</li>
+                <li><i class="fas fa-search"></i> Exploratory Testing</li>
+                <li><i class="fas fa-plug"></i> API Testing</li>
+                <li><i class="fas fa-clipboard-list"></i> Test Case Creation</li>
+                <li><i class="fas fa-bug"></i> Bug Tracking</li>
+                <li><i class="fas fa-file-alt"></i> Defect Reporting</li>
+                <li><i class="fas fa-microscope"></i> Defect Analysis &amp; RCA</li>
+                <li><i class="fas fa-book"></i> QA Documentation</li>
+                <li><i class="fas fa-user-check"></i> UAT Support</li>
+                <li><i class="fas fa-chart-line"></i> Test Reporting</li>
+              </ul>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title"><i class="fas fa-robot"></i> Test Automation (AHQ)</h3>
+              <ul class="chips chips--pop">
+                <li>No-Code Test Automation</li>
+                <li>Automated Test Script Creation using AHQ</li>
+                <li>Test Script Execution and Monitoring</li>
+                <li>Test Script Maintenance</li>
+                <li>Automated Test Result Analysis</li>
+                <li>Failed Test Execution Investigation</li>
+                <li>Root Cause Analysis (RCA)</li>
+              </ul>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title"><i class="fas fa-code-branch"></i> Deployment &amp; Version Control</h3>
+              <ul class="chips chips--pop">
+                <li><i class="fa-brands fa-github"></i> GitHub</li>
+                <li>Staging Environment Deployment</li>
+                <li>Basic Git Workflow</li>
+                <li>Deployment Verification</li>
+                <li><i class="fas fa-cloud-arrow-up"></i> Client Ephemeral Environment Deployment (Terraform)</li>
+              </ul>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title"><i class="fas fa-diagram-project"></i> Methodologies</h3>
+              <ul class="chips chips--pop">
+                <li><i class="fas fa-rotate"></i> Agile <small class="chip__note">daily practice</small></li>
+                <li><i class="fas fa-people-arrows"></i> Scrum <small class="chip__note">daily practice</small></li>
+                <li><i class="fas fa-code-branch"></i> SDLC <small class="chip__note">process</small></li>
+                <li><i class="fas fa-vials"></i> STLC <small class="chip__note">process</small></li>
+              </ul>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title"><i class="fas fa-toolbox"></i> Development &amp; Tools</h3>
+              <ul class="chips chips--pop">
+                <li><i class="fas fa-robot"></i> AHQ No-Code Automation Platform</li>
+                <li><i class="fas fa-code"></i> AI-Assisted Rapid Prototyping</li>
+                <li><i class="fas fa-database"></i> AI-Powered PHP Development</li>
+                <li><i class="fas fa-paint-brush"></i> Figma (UI/UX)</li>
+                <li class="chip--hot"><i class="fas fa-robot"></i> Cursor AI</li>
+                <li class="chip--hot"><i class="fas fa-wand-magic-sparkles"></i> Claude</li>
+                <li><i class="fas fa-file-word"></i> Microsoft Word &amp; Excel</li>
+              </ul>
+            </div>
+
+            <div class="skill-group reveal">
+              <h3 class="skill-group__title"><i class="fas fa-heart"></i> Soft Skills</h3>
+              <ul class="chips chips--pop">
+                <li><i class="fas fa-random"></i> Adaptability</li>
+                <li><i class="fas fa-users"></i> Teamwork</li>
+                <li><i class="fas fa-comments"></i> Communication</li>
+                <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="proficiency reveal" data-reveal="right">
+            <h3 class="proficiency__title">Proficiency</h3>
+            <ul class="bars">
+              <li class="bar" style="--v:96"><span class="bar__name">Automation Testing (AHQ Tools)</span><span class="bar__val">Advanced</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:92"><span class="bar__name">Quality Assurance</span><span class="bar__val">Advanced</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:92"><span class="bar__name">Manual Testing</span><span class="bar__val">Advanced</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:92"><span class="bar__name">UI Testing</span><span class="bar__val">Advanced</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:92"><span class="bar__name">Test Case &amp; Defect Management</span><span class="bar__val">Advanced</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:90"><span class="bar__name">AI-Powered PHP Development</span><span class="bar__val">Advanced</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:78"><span class="bar__name">AI-Assisted Rapid Prototyping</span><span class="bar__val">Proficient</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:60"><span class="bar__name">Figma (UI/UX)</span><span class="bar__val">Intermediate</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+              <li class="bar" style="--v:42"><span class="bar__name">API Testing</span><span class="bar__val">Developing</span><span class="bar__track"><span class="bar__fill"></span></span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CORE EXPERTISE ============ -->
+    <section class="section section--alt" id="services">
+      <span class="bg-word" aria-hidden="true">EXPERTISE</span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">04 — Services</p>
+          <h2 class="section-title">Core <em>Expertise</em></h2>
+        </header>
+
+        <div class="expertise">
+          <article class="x-card tilt spotlight reveal">
+            <span class="x-card__num">01</span>
+            <i class="fas fa-vial x-card__icon"></i>
+            <h3>Quality Assurance &amp; Testing</h3>
             <p>Manual and UI-focused testing across regression, smoke, sanity, functional, and E2E flows — plus automation with AHQ tools from AutomationHQ for repeatable test execution</p>
-          </div>
-
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800">
-            <i class="fas fa-clipboard-check"></i>
-            <h3>QA Process & Documentation</h3>
+          </article>
+          <article class="x-card tilt spotlight reveal">
+            <span class="x-card__num">02</span>
+            <i class="fas fa-clipboard-check x-card__icon"></i>
+            <h3>QA Process &amp; Documentation</h3>
             <p>Structured test case creation, bug tracking, defect reporting, root cause analysis, and clear QA documentation for traceable, high-quality delivery</p>
-          </div>
-
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
-            <i class="fas fa-robot"></i>
+          </article>
+          <article class="x-card tilt spotlight reveal">
+            <span class="x-card__num">03</span>
+            <i class="fas fa-robot x-card__icon"></i>
             <h3>AI-Assisted Development</h3>
-            <p>Build and test web systems using Cursor AI, vibe coding, and AI-powered PHP workflows — fast delivery without sacrificing functionality</p>
-          </div>
-
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="850" data-aos-duration="800">
-            <i class="fas fa-paint-brush"></i>
+            <p>Build and test web systems using Cursor AI, AI-assisted prototyping, and AI-powered PHP workflows — fast delivery without sacrificing functionality</p>
+          </article>
+          <article class="x-card tilt spotlight reveal">
+            <span class="x-card__num">04</span>
+            <i class="fas fa-paint-brush x-card__icon"></i>
             <h3>UI/UX Design</h3>
             <p>Figma prototyping for intuitive interfaces — supporting usability testing and clearer communication with design and dev teams</p>
-          </div>
-
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="950" data-aos-duration="800">
-            <i class="fas fa-code"></i>
-            <h3>Vibe Coding</h3>
+          </article>
+          <article class="x-card tilt spotlight reveal">
+            <span class="x-card__num">05</span>
+            <i class="fas fa-code x-card__icon"></i>
+            <h3>AI-Assisted Rapid Prototyping</h3>
             <p>Creative, AI-assisted development workflow for rapid prototyping, side projects, and turning ideas into working demos efficiently</p>
-          </div>
-
-          <div class="skill-card" data-aos="fade-up" data-aos-delay="1050" data-aos-duration="800">
-            <i class="fas fa-handshake"></i>
+          </article>
+          <article class="x-card tilt spotlight reveal">
+            <span class="x-card__num">06</span>
+            <i class="fas fa-handshake x-card__icon"></i>
             <h3>Professional Collaboration</h3>
             <p>Strong adaptability, teamwork, communication, and problem solving — essential for cross-functional QA, dev, and client-facing work</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="works">
+      <span class="bg-word" aria-hidden="true">WORKS</span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">05 — Projects</p>
+          <h2 class="section-title">Sample <em>Works</em></h2>
+        </header>
 
-    <section id="works">
-      <div class="works-container">
-        <h2 data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">Sample <span>Works</span></h2>
-        
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project" data-aos="fade-up" data-aos-delay="450" data-aos-duration="800">
-            <div class="project-content">
-              <div class="project-header">
-                <i class="fas fa-folder-open"></i>
-                <div class="project-links">
-                  <a href="https://github.com/ochiaCarlosMiguel/Inventory-System" target="_blank">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              
-              <h3>Inventory Management System</h3>
-              <p>A comprehensive system for managing inventory, orders, and business operations.</p>
-              
-              <div class="project-tech">
-                <span>AI-Assisted</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>PHP</span>
-                <span>MySQL</span>
-              </div>
-
-              <div class="credentials-container">
-                <button class="credentials-btn" onclick="toggleCredentials(this)">
-                  <i class="fas fa-code-branch"></i> View Details
-                </button>
-                <div class="credentials-info" style="display: none;">
-                  <div class="credential-group">
-                    <h3>GitHub Repository</h3>
-                    <p>View the complete source code and documentation</p>
-                    <a href="https://github.com/ochiaCarlosMiguel/Inventory-System" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: linear-gradient(45deg, #60A5FA, #E5E7EB); color: #1F2937; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);">
-                      <i class="fab fa-github"></i> View Inventory System Repository
-                    </a>
-                  </div>
-                  <div class="credential-group">
-                    <h3>Login Credentials</h3>
-                    <p><i class="fas fa-user-shield"></i> Admin: CarlosBodonia / admin&Carlos</p>
-                    <p><i class="fas fa-user"></i> Staff: Alex / admin</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project" data-aos="fade-up" data-aos-delay="550" data-aos-duration="800">
-            <div class="project-content">
-              <div class="project-header">
-                <i class="fas fa-laptop-code"></i>
-                <div class="project-links">
-                  <a href="https://github.com/ochiaCarlosMiguel/CitCare360" target="_blank">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              
-              <h3>CitCare360</h3>
-              <p>Emergency reporting system for College of Industrial Technology students, featuring a responsive interface and real-time incident management</p>
-              
-              <div class="project-tech">
-                <span>AI-Assisted</span>
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>HTML/CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="credentials-container">
-                <button class="credentials-btn" onclick="toggleCredentials(this)">
-                  <i class="fas fa-code-branch"></i> View Details
-                </button>
-                <div class="credentials-info" style="display: none;">
-                  <div class="credential-group">
-                    <h3>GitHub Repository</h3>
-                    <p>View the complete source code and documentation</p>
-                    <a href="https://github.com/ochiaCarlosMiguel/CitCare360" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: linear-gradient(45deg, #60A5FA, #E5E7EB); color: #1F2937; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);">
-                      <i class="fab fa-github"></i> View CitCare360 Repository
-                    </a>
-                  </div>
-                  <div class="credential-group">
-                    <h3>Key Features</h3>
-                    <p>• Emergency incident reporting system with real-time admin notifications via email</p>
-                    <p>• Secure student verification against CIT blueprint database</p>
-                    <p>• Student and admin portals with role-based access</p>
-                    <p>• Dark/Light mode interface for user preference</p>
-                  </div>
-                  <div class="credential-group">
-                    <h3>Technical Implementation</h3>
-                    <p>• Automated email notifications to admin for new incident reports</p>
-                    <p>• Student verification system against CIT database (import/manual)</p>
-                    <p>• Secure registration process preventing unauthorized access</p>
-                    <p>• Separate admin and student interfaces with different functionalities</p>
-                    <p>• Database-driven architecture with real-time updates</p>
-                    <p>• Responsive design for all devices</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="project" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
-            <div class="project-content">
-              <div class="project-header">
-                <i class="fas fa-paint-brush"></i>
-                <div class="project-links">
-                  <a href="https://www.figma.com/proto/75J7V3yid5rJDcJJddjG5s/Untitled" target="_blank">
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              
-              <h3>Internship Finder Design</h3>
-              <p>Internship Finder interface design focusing on CIT students who is finding Internship</p>
-              
-              <div class="project-tech">
-                <span>Figma</span>
-                <span>UI/UX</span>
-                <span>Prototyping</span>
-              </div>
-            </div>
-          </div>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="qa" aria-pressed="false">QA &amp; Automation</button>
+          <button class="filter" data-filter="dev" aria-pressed="false">Development</button>
+          <button class="filter" data-filter="design" aria-pressed="false">Design</button>
         </div>
-      </div>
-    </section>
 
+        <div class="projects">
+          <!-- Client QA Support (featured) -->
+          <article class="project project--feature spotlight reveal" data-cat="qa">
+            <div class="project__top">
+              <span class="project__icon"><i class="fas fa-headset"></i></span>
+              <span class="project__cat">Client QA Support · TaaS</span>
+              <span class="live-badge"><span class="live-badge__dot"></span>Ongoing</span>
+            </div>
 
-    <section id="certificates">
-      <div class="certificate">
-        <div class="certon">
-      <button id="button" onclick="showContent();">CERTIFICATES</button>
-    </div>
-      <div id="cont" class="cont">
-        <h1>Certificates</h1>
-        <button class="close-btn" onclick="hideContent();">&times;</button>
-        <div class="ficate">
-          <img src="certificate.png" onclick="openModal(this)">
-          <img class="screen1" src="cert2.jpg" onclick="openModal(this)">
-          <img src="cert3.jpg" onclick="openModal(this)">
-          <img src="cert4.jpg" onclick="openModal(this)">
-          <img src="cert5.jpg" onclick="openModal(this)">
-          <img src="cert6.jpg" onclick="openModal(this)">
-          <img src="cert7.jpg" onclick="openModal(this)">
-          <img src="cert8.jpg" onclick="openModal(this)">
-          <img src="Certificate of Completion.jpg" onclick="openModal(this)">
-        </div>
-      </div>
-    </div>
-    </section>
+            <div class="feature__grid">
+              <div class="feature__main">
+                <h3 class="project__title">Client QA Support — TaaS Client</h3>
+                <p class="project__role">QA Engineer · AutomationHQ · EdTech ERP platform</p>
+                <p class="project__desc">
+                  Dedicated QA support for a Testing-as-a-Service (TaaS) client: I keep their daily automated regression
+                  healthy, design and automate test cases for new modules and enhancements, analyze every failure down to its
+                  root cause, and make sure the AHQ platform workflow the client depends on runs every day without issues.
+                </p>
 
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-    </div>
-
-    <section id="timeline" class="timeline">
-      <ul>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>QUALITY ASSURANCE</h1>
-            </div>
-            <div class="programming">
-              <h2>90%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>AUTOMATION TESTING (AHQ TOOLS)</h1>
-            </div>
-            <div class="programming">
-              <h2>95%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>MANUAL TESTING</h1>
-            </div>
-            <div class="programming">
-              <h2>90%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>UI TESTING</h1>
-            </div>
-            <div class="programming">
-              <h2>90%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>TEST CASE & DEFECT MANAGEMENT</h1>
-            </div>
-            <div class="programming">
-              <h2>90%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>API TESTING</h1>
-            </div>
-            <div class="programming">
-              <h2>40%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>AI-POWERED PHP DEVELOPMENT</h1>
-            </div>
-            <div class="programming">
-              <h2>90%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>CODE VIBING</h1>
-            </div>
-            <div class="programming">
-              <h2>80%</h2>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <time>2025</time>
-            <div class="programming">
-              <h1>FIGMA (UI/UX)</h1>
-            </div>
-            <div class="programming">
-              <h2>60%</h2>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    
-    <section id="footer">
-      <div class="footer">
-        <div class="footer-content">
-          <div class="footer-left">
-            <h2>Let's Connect</h2>
-            <p>Feel free to reach out for collaborations or just a friendly hello</p>
-            <div class="contact-info">
-              <div class="contact-item">
-                <i class="fa fa-phone"></i>
-                <p>09709158346</p>
+                <dl class="feature__stats">
+                  <div><dt>Daily regression</dt><dd><b data-count="95">0</b>+</dd><small>scripts run daily · suite still growing</small></div>
+                  <div><dt>Test cases automated</dt><dd><b data-count="700">0</b>+</dd><small>of 890+ handled across 3 ERP suites</small></div>
+                  <div><dt>Locators maintained</dt><dd><b data-count="4455">0</b></dd><small>across 238 web pages</small></div>
+                  <div><dt>Script optimization</dt><dd>Ongoing</dd><small>all scripts · fewer intermittent failures, faster runs</small></div>
+                </dl>
               </div>
-              <div class="contact-item">
-                <i class="fa fa-envelope"></i>
-                <p>carlosmiguelb.ochia@gmail.com</p>
-              </div>
+
+              <aside class="feature__side">
+                <h4 class="feature__label"><i class="fas fa-heart-pulse"></i> Daily TaaS workflow validation</h4>
+                <ul class="health">
+                  <li><i class="fas fa-robot"></i> TestBots</li>
+                  <li><i class="fas fa-play"></i> TestBot Execution</li>
+                  <li><i class="fas fa-calendar-check"></i> Scheduler</li>
+                  <li><i class="fas fa-list-check"></i> Executions</li>
+                  <li><i class="fas fa-server"></i> Grids</li>
+                  <li><i class="fas fa-file-lines"></i> Test Reports</li>
+                  <li><i class="fas fa-envelope-open-text"></i> Email Test Reports</li>
+                  <li><i class="fas fa-circle-check"></i> Correct Report Details</li>
+                  <li><i class="fas fa-user-tie"></i> Business Sponsor Role</li>
+                  <li><i class="fas fa-user-gear"></i> Tester Role</li>
+                  <li><i class="fas fa-rotate"></i> Retry for Intermittent Failures</li>
+                </ul>
+              </aside>
             </div>
-            <div class="social-footer">
-              <a href="https://www.facebook.com/carlos.ochia.56/"><i class="fa-brands fa-facebook-square"></i></a>
-              <a href="https://github.com/ochiaCarlosMiguel"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/carlos-miguel-ochia-367072279/"><i class="fa-brands fa-linkedin"></i></a>
+
+            <div class="escalation">
+              <h4 class="feature__label"><i class="fas fa-bolt"></i> Critical (P0) defects — same-day escalation</h4>
+              <ol class="flow">
+                <li><span class="flow__icon"><i class="fas fa-magnifying-glass"></i></span><b>Detect</b><small>Issue found during daily workflow validation</small></li>
+                <li><span class="flow__icon"><i class="fas fa-triangle-exclamation"></i></span><b>Report</b><small>Escalated as a critical (P0) defect</small></li>
+                <li><span class="flow__icon"><i class="fas fa-code"></i></span><b>Fix + ETA</b><small>Work with Dev for a same-day fix</small></li>
+                <li><span class="flow__icon"><i class="fas fa-rocket"></i></span><b>Hotfix</b><small>Coordinate deployment with DevOps</small></li>
+                <li><span class="flow__icon"><i class="fas fa-check-double"></i></span><b>Verify</b><small>Re-test so the client is unaffected</small></li>
+              </ol>
             </div>
-          </div>
-          <div class="footer-right">
-            <h2>Quick Links</h2>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#works">Projects</a></li>
-              <li><a href="#certificates">Certificates</a></li>
+
+            <ul class="project__tech">
+              <li>AHQ No-Code Automation Platform</li><li>TestBots &amp; Scheduler</li><li>GitHub</li><li>GitHub Actions</li>
+              <li>Ephemeral Environments</li><li>Run Book &amp; RCA Tracker</li>
             </ul>
-          </div>
+
+            <button class="details-btn" type="button" aria-expanded="false"><span>View Details</span><i class="fas fa-chevron-down"></i></button>
+            <div class="details details--3" hidden>
+              <div class="details__group">
+                <h4><i class="fas fa-clipboard-list"></i> Test Design &amp; Automation</h4>
+                <ul class="arrow-list">
+                  <li>Handled 890+ test cases across 3 ERP suites, with 700+ already automated.</li>
+                  <li>Rebuilt outdated Late Fees coverage through exploratory testing, growing it to 82 automation-ready test cases.</li>
+                  <li>Automated a 13-case Excel Upload flow into a single 472-step script.</li>
+                </ul>
+              </div>
+              <div class="details__group">
+                <h4><i class="fas fa-screwdriver-wrench"></i> Stability &amp; Maintenance</h4>
+                <ul class="arrow-list">
+                  <li>Investigate every daily-run failure, document root causes, and report system issues right away.</li>
+                  <li>Keep 4,455 locators current as the application changes, and optimize all scripts to remove intermittent failures and cut execution time.</li>
+                  <li>Deploy and validate temporary test environments through GitHub Actions using a smoke-test bot.</li>
+                </ul>
+              </div>
+              <div class="details__group">
+                <h4><i class="fas fa-comments"></i> Client Collaboration</h4>
+                <ul class="arrow-list">
+                  <li>Coordinate with the client on new modules and enhancements to automate.</li>
+                  <li>Report defects with clear reproduction steps and escalate critical issues for same-day fixes.</li>
+                  <li>Share daily execution summaries, and set client users up to receive scheduled reports.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Inventory -->
+          <article class="project spotlight reveal" data-cat="dev">
+            <div class="project__top">
+              <span class="project__icon"><i class="fas fa-folder-open"></i></span>
+              <span class="project__cat">Web System</span>
+              <a class="project__link" href="https://github.com/ochiaCarlosMiguel/Inventory-System" target="_blank" rel="noopener" aria-label="Open Inventory System on GitHub"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h3 class="project__title">Inventory Management System</h3>
+            <p class="project__desc">A comprehensive system for managing inventory, orders, and business operations.</p>
+            <ul class="project__tech">
+              <li>AI-Assisted</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
+            </ul>
+            <button class="details-btn" type="button" aria-expanded="false"><span>View Details</span><i class="fas fa-chevron-down"></i></button>
+            <div class="details" hidden>
+              <div class="details__group">
+                <h4>GitHub Repository</h4>
+                <p>View the complete source code and documentation</p>
+                <a class="repo-btn" href="https://github.com/ochiaCarlosMiguel/Inventory-System" target="_blank" rel="noopener"><i class="fab fa-github"></i> View Inventory System Repository</a>
+              </div>
+              <div class="details__group">
+                <h4>Login Credentials</h4>
+                <p><i class="fas fa-user-shield"></i> Admin: CarlosBodonia / admin&amp;Carlos</p>
+                <p><i class="fas fa-user"></i> Staff: Alex / admin</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- CitCare360 -->
+          <article class="project spotlight reveal" data-cat="dev">
+            <div class="project__top">
+              <span class="project__icon"><i class="fas fa-laptop-code"></i></span>
+              <span class="project__cat">Web System</span>
+              <a class="project__link" href="https://github.com/ochiaCarlosMiguel/CitCare360" target="_blank" rel="noopener" aria-label="Open CitCare360 on GitHub"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h3 class="project__title">CitCare360</h3>
+            <p class="project__desc">Emergency reporting system for College of Industrial Technology students, featuring a responsive interface and real-time incident management</p>
+            <ul class="project__tech">
+              <li>AI-Assisted</li><li>PHP</li><li>MySQL</li><li>HTML/CSS</li><li>JavaScript</li>
+            </ul>
+            <button class="details-btn" type="button" aria-expanded="false"><span>View Details</span><i class="fas fa-chevron-down"></i></button>
+            <div class="details" hidden>
+              <div class="details__group">
+                <h4>GitHub Repository</h4>
+                <p>View the complete source code and documentation</p>
+                <a class="repo-btn" href="https://github.com/ochiaCarlosMiguel/CitCare360" target="_blank" rel="noopener"><i class="fab fa-github"></i> View CitCare360 Repository</a>
+              </div>
+              <div class="details__group">
+                <h4>Key Features</h4>
+                <ul class="arrow-list">
+                  <li>Emergency incident reporting system with real-time admin notifications via email</li>
+                  <li>Secure student verification against CIT blueprint database</li>
+                  <li>Student and admin portals with role-based access</li>
+                  <li>Dark/Light mode interface for user preference</li>
+                </ul>
+              </div>
+              <div class="details__group">
+                <h4>Technical Implementation</h4>
+                <ul class="arrow-list">
+                  <li>Automated email notifications to admin for new incident reports</li>
+                  <li>Student verification system against CIT database (import/manual)</li>
+                  <li>Secure registration process preventing unauthorized access</li>
+                  <li>Separate admin and student interfaces with different functionalities</li>
+                  <li>Database-driven architecture with real-time updates</li>
+                  <li>Responsive design for all devices</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Internship Finder -->
+          <article class="project spotlight reveal" data-cat="design">
+            <div class="project__top">
+              <span class="project__icon"><i class="fas fa-paint-brush"></i></span>
+              <span class="project__cat">UI/UX Design</span>
+              <a class="project__link" href="https://www.figma.com/proto/75J7V3yid5rJDcJJddjG5s/Untitled" target="_blank" rel="noopener" aria-label="Open Internship Finder prototype in Figma"><i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h3 class="project__title">Internship Finder Design</h3>
+            <p class="project__desc">An internship finder interface designed for CIT students who are looking for internships.</p>
+            <ul class="project__tech">
+              <li>Figma</li><li>UI/UX</li><li>Prototyping</li>
+            </ul>
+            <a class="details-btn details-btn--link" href="https://www.figma.com/proto/75J7V3yid5rJDcJJddjG5s/Untitled" target="_blank" rel="noopener"><span>Open Prototype</span><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </article>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Carlos Miguel Ochia. All rights reserved.</p>
-        </div>
-      </div>
-      
-      <div id="arrow-container">
-        <a id="scroll-top" href="#logo"><img src="scrolltop.png" alt="Scroll to top"></a>
       </div>
     </section>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        var wavingHand = document.querySelector('.waving-hand');
-    
-        function startShaking() {
-          wavingHand.classList.add('shake-hand');
-        }
-    
-        function stopShaking() {
-          wavingHand.classList.remove('shake-hand');
-        }
-    
-        setInterval(function() {
-          startShaking();
-          setTimeout(stopShaking, 800);
-        }, 4000);
 
-        AOS.init();
+    <!-- ============ CERTIFICATES ============ -->
+    <section class="section section--alt" id="certificates">
+      <span class="bg-word" aria-hidden="true">CERTS</span>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">06 — Achievements</p>
+          <h2 class="section-title">My <em>Certificates</em></h2>
+          <p class="section-sub">Recognition from work, student leadership, competitions, and learning. Click any certificate to view it in full size.</p>
+        </header>
 
-        function showContent() {
-      var content = document.getElementById('cont');
-      var button = document.getElementById('button');
-      content.classList.add('show-image');
-      button.classList.add('hide-button');
-    }
+        <div class="cert-filters reveal" role="group" aria-label="Filter certificates">
+          <button class="cert-filter is-active" data-cf="all" aria-pressed="true"><i class="fas fa-layer-group"></i> All <span class="cert-filter__n">9</span></button>
+          <button class="cert-filter" data-cf="leadership" aria-pressed="false"><i class="fas fa-people-group"></i> Leadership <span class="cert-filter__n">4</span></button>
+          <button class="cert-filter" data-cf="professional" aria-pressed="false"><i class="fas fa-briefcase"></i> Professional <span class="cert-filter__n">1</span></button>
+          <button class="cert-filter" data-cf="award" aria-pressed="false"><i class="fas fa-trophy"></i> Awards <span class="cert-filter__n">1</span></button>
+          <button class="cert-filter" data-cf="learning" aria-pressed="false"><i class="fas fa-book-open"></i> Learning &amp; Events <span class="cert-filter__n">3</span></button>
+        </div>
 
-    function hideContent() {
-      var content = document.getElementById('cont');
-      var button = document.getElementById('button');
-      content.classList.remove('show-image');
-      button.classList.remove('hide-button');
-    }
+        <div class="certs">
+          <!-- Professional (featured) -->
+          <button class="cert cert--featured reveal" data-cat="professional" data-full="Certificate of Completion.jpg">
+            <span class="cert__media"><img src="certs/thumb-ahq.jpg" alt="Certificate of Completion — Internship at AutomationHQ (January 27 – May 12, 2025)" loading="lazy" width="720" height="509" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--professional"><i class="fas fa-briefcase"></i> Professional</span>
+              <span class="cert__title">QA Internship — Certificate of Completion</span>
+              <span class="cert__meta">AutomationHQ · Jan 27 – May 12, 2025</span>
+              <span class="cert__note">Recognized for exceptional skills, dedication, and professionalism during the internship.</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
 
-    var items = document.querySelectorAll(".timeline li");
+          <!-- Leadership -->
+          <button class="cert reveal" data-cat="leadership" data-full="certs/cert4-scan.jpg">
+            <span class="cert__media"><img src="certs/thumb-cert4.jpg" alt="Certificate of Appreciation — Associate Director for Communication, SPICE 2022–2023" loading="lazy" width="720" height="522" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
+              <span class="cert__title">Associate Director for Communication</span>
+              <span class="cert__meta">SPICE · BulSU-CIT · 2022–2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+          <button class="cert reveal" data-cat="leadership" data-full="cert2.jpg">
+            <span class="cert__media"><img src="certs/thumb-cert2.jpg" alt="Certificate of Appreciation — Organizer, Comptech-niques: Crafting Your Career in the Dynamic World of Technology (SPICE, May 2023)" loading="lazy" width="720" height="509" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
+              <span class="cert__title">Organizer — Comptech-niques: Crafting Your Career</span>
+              <span class="cert__meta">SPICE · BulSU-CIT · May 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+          <button class="cert reveal" data-cat="leadership" data-full="certs/cert5-scan.jpg">
+            <span class="cert__media"><img src="certs/thumb-cert5.jpg" alt="Certificate of Appreciation — Organizer, Comptechniques: Augment Your Tech Knowledge (SPICE, December 2023)" loading="lazy" width="720" height="553" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
+              <span class="cert__title">Organizer — Comptechniques: Augment Your Tech Knowledge</span>
+              <span class="cert__meta">SPICE · BulSU-CIT · Dec 12, 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+          <button class="cert reveal" data-cat="leadership" data-full="certs/cert6-scan.jpg">
+            <span class="cert__media"><img src="certs/thumb-cert6.jpg" alt="Certificate of Appreciation — Organizer, Comptechniques: Beyond Basics (SPICE, December 2023)" loading="lazy" width="720" height="516" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
+              <span class="cert__title">Organizer — Comptechniques: Beyond Basics</span>
+              <span class="cert__meta">SPICE · BulSU-CIT · Dec 14, 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
 
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+          <!-- Award -->
+          <button class="cert cert--portrait reveal" data-cat="award" data-full="certs/cert3-scan.jpg" style="--blur:url('certs/thumb-cert3.jpg')">
+            <span class="cert__media"><img src="certs/thumb-cert3.jpg" alt="Certificate of Excellence — PC Building &amp; PC Troubleshooting competitions, Bulacan Tech Expo (October 2023)" loading="lazy" width="720" height="1013" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--award"><i class="fas fa-trophy"></i> Award</span>
+              <span class="cert__title">Certificate of Excellence — PC Building &amp; Troubleshooting</span>
+              <span class="cert__meta">Bulacan Tech Expo · Oct 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
 
-function callbackFunc() {
-  for (var i = 0; i < items.length; i++) {
-    if (isElementInViewport(items[i])) {
-      if(!items[i].classList.contains("in-view")){
-        items[i].classList.add("in-view");
-      }
-    } else if(items[i].classList.contains("in-view")) {
-        items[i].classList.remove("in-view");
-    }
-  }
-}
- 
-window.addEventListener("load", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
+          <!-- Learning & Events -->
+          <button class="cert reveal" data-cat="learning" data-full="certificate.png">
+            <span class="cert__media"><img src="certs/thumb-sql.jpg" alt="Course Certificate — Introduction to SQL (Sololearn, 2023)" loading="lazy" width="720" height="508" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--learning"><i class="fas fa-book-open"></i> Learning</span>
+              <span class="cert__title">Introduction to SQL</span>
+              <span class="cert__meta">Sololearn · May 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+          <button class="cert reveal" data-cat="learning" data-full="certs/cert7-scan.jpg">
+            <span class="cert__media"><img src="certs/thumb-cert7.jpg" alt="Certificate of Participation — Comptechniques: Augment Your Tech Knowledge (SPICE, December 2023)" loading="lazy" width="720" height="564" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--learning"><i class="fas fa-calendar-check"></i> Event</span>
+              <span class="cert__title">Participant — Comptechniques: Augment Your Tech Knowledge</span>
+              <span class="cert__meta">SPICE · BulSU-CIT · Dec 12, 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+          <button class="cert reveal" data-cat="learning" data-full="certs/cert8-scan.jpg">
+            <span class="cert__media"><img src="certs/thumb-cert8.jpg" alt="Certificate of Participation — SPICE-YAL na Handog para sa Kabataan community outreach (March 2023)" loading="lazy" width="720" height="508" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--learning"><i class="fas fa-hand-holding-heart"></i> Outreach</span>
+              <span class="cert__title">Participant — SPICE-YAL na Handog para sa Kabataan</span>
+              <span class="cert__meta">BulSU-CIT · Community outreach · Mar 2023</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
 
-window.addEventListener('scroll', function() {
-  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__box reveal">
+          <p class="eyebrow">07 — Contact</p>
+          <h2 class="contact__title">Let's <em>Connect</em></h2>
+          <p class="contact__text">Feel free to reach out for collaborations or just a friendly hello</p>
 
-  if (scrollPosition > 200) {
-    document.getElementById('scroll-top').style.display = 'block';
-  } else {
-    document.getElementById('scroll-top').style.display = 'none';
-  }
-});
+          <div class="contact__items">
+            <a class="contact-item magnetic" href="tel:+639709158346">
+              <span class="contact-item__icon"><i class="fas fa-phone"></i></span>
+              <span><small>Phone</small>09709158346</span>
+            </a>
+            <div class="contact-item contact-item--email">
+              <a class="contact-item__main" href="mailto:carlosmiguelb.ochia@gmail.com">
+                <span class="contact-item__icon"><i class="fas fa-envelope"></i></span>
+                <span><small>Email</small><span id="emailText">carlosmiguelb.ochia@gmail.com</span></span>
+              </a>
+              <button class="copy" id="copyEmail" type="button" aria-label="Copy email address"><i class="far fa-copy"></i></button>
+            </div>
+          </div>
 
-function toggleCredentials(button) {
-  const credentialsInfo = button.nextElementSibling;
-  if (credentialsInfo.style.display === 'none') {
-    credentialsInfo.style.display = 'block';
-    button.textContent = 'Close';
-  } else {
-    credentialsInfo.style.display = 'none';
-    button.textContent = 'View Credentials to Login';
-  }
-}
+          <a href="Carlos-Miguel-Ochia-Resume.pdf" class="btn btn--primary magnetic contact__cv" download="Carlos-Miguel-Ochia-Resume.pdf"><span>Download My CV</span><i class="fas fa-file-arrow-down"></i></a>
 
-let currentIndex = 0;
+          <div class="social social--big">
+            <a href="https://www.facebook.com/carlos.ochia.56/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/ochiaCarlosMiguel" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-miguel-ochia-367072279/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-function slideImage(direction) {
-  const images = document.querySelectorAll('.certificate-image');
-  const totalImages = images.length;
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="logo"><span>CM</span>O.</a>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+        <a href="#works">Projects</a><a href="#certificates">Certificates</a>
+      </nav>
+      <p>&copy; <span id="year">2026</span> Carlos Miguel Ochia. All rights reserved.</p>
+    </div>
+  </footer>
 
-  currentIndex = (currentIndex + direction + totalImages) % totalImages;
+  <!-- Back to top with scroll-progress ring -->
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" class="to-top__track" /><circle cx="24" cy="24" r="21" class="to-top__ring" id="toTopRing" /></svg>
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-  const offset = -currentIndex * 100;
-  images.forEach(image => {
-    image.style.transform = `translateX(${offset}%)`;
-  });
-}
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+    <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Close"><i class="fas fa-xmark"></i></button>
+    <button class="lightbox__btn lightbox__prev" id="lbPrev" aria-label="Previous certificate"><i class="fas fa-chevron-left"></i></button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__next" id="lbNext" aria-label="Next certificate"><i class="fas fa-chevron-right"></i></button>
+  </div>
 
-// Modal functionality
-var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("img01");
-var span = document.getElementsByClassName("close")[0];
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-function openModal(img) {
-  modal.style.display = "block";
-  modalImg.src = img.src;
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-      </script>
+  <script src="main.js"></script>
+  <script src="playful.js"></script>
 </body>
 </html>
