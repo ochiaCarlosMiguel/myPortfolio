@@ -1,28 +1,17 @@
 /* =========================================================
-   PLAYFUL LAYER — interactive extras on top of main.js.
-   To revert: remove the playful.css <link> and this <script>
-   from index.html (or restore _backup-before-playful/).
+   playful.js — optional fun layer: Bug Hunt mini-game + HUD,
+   photo fun facts, hero bursts, sparkle trail, chip pops,
+   stat recount, P0 escalation simulator, holographic
+   certificates, rocket back-to-top.
+   Fully optional: remove this <script> and 16-playful.css
+   from index.html and the rest of the site keeps working.
    ========================================================= */
-(function () {
+window.CMO.module("playful", function () {
   "use strict";
 
-  const $ = (s, c = document) => c.querySelector(s);
-  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
-  const root = document.documentElement;
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const { $, $$, reduceMotion, finePointer, replay } = window.CMO;
   const COLORS = ["#c4f042", "#2fd5f0", "#7fe68f", "#ffffff", "#f59e0b"];
-
-  /* ---------- helpers ---------- */
-  const toastEl = $("#toast");
-  let toastTimer;
-  function toast(msg, ms = 2600) {
-    if (!toastEl) return;
-    toastEl.textContent = msg;
-    toastEl.classList.add("is-visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toastEl.classList.remove("is-visible"), ms);
-  }
+  const toast = (msg, ms = 2600) => window.CMO.toast(msg, ms);
 
   function burst(x, y, n = 14, spread = 70) {
     if (reduceMotion) return;
@@ -69,11 +58,6 @@
     t.addEventListener("animationend", () => t.remove());
   }
 
-  function replay(el, cls) {
-    el.classList.remove(cls);
-    void el.offsetWidth;
-    el.classList.add(cls);
-  }
 
   /* =========================================================
      1. BUG HUNT — 5 bugs hidden around the page
@@ -197,11 +181,7 @@
   }
 
   // show the HUD + intro tip once the loading screen is gone
-  const waitReady = setInterval(() => {
-    if (!root.classList.contains("is-ready")) return;
-    clearInterval(waitReady);
-    setTimeout(() => { hud.classList.add("is-shown"); showTip(); }, 1800);
-  }, 200);
+  window.CMO.whenReady(() => setTimeout(() => { hud.classList.add("is-shown"); showTip(); }, 1800));
 
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => {
@@ -231,22 +211,34 @@
   ];
   let factIdx = 0, bubble = null, bubbleTimer;
   if (orb && photo) {
-    const hint = document.createElement("span");
-    hint.className = "orb__hint";
-    hint.textContent = "click me!";
-    orb.appendChild(hint);
+    /* A small 💡 bulb with a short label circles the photo ("Click me").
+       On the first click it stops right where it is and says "Click for next". */
+    const verb = finePointer ? "Click" : "Tap";
+
+    const orbit = document.createElement("span");
+    orbit.className = "orb__orbit";
+    orbit.setAttribute("aria-hidden", "true");
+    orbit.innerHTML = `<span class="orb__hint"><span class="orb__hint-icon">💡</span><span class="orb__hint-short">${verb} me</span></span>`;
+    orb.appendChild(orbit);
+    const icon = $(".orb__hint-icon", orbit);
+    const label = $(".orb__hint-short", orbit);
     photo.setAttribute("role", "button");
     photo.setAttribute("tabindex", "0");
-    photo.setAttribute("aria-label", "Show a fun fact about Carlos");
+    photo.setAttribute("aria-label", `Show a fun fact about Carlos (${FACTS.length} facts)`);
 
     const showFact = () => {
-      hint.remove();
+      if (factIdx === 0) {
+        orb.classList.add("hint-parked");          // the bulb stops where it is
+        label.textContent = `${verb} for next`;
+      }
+      replay(icon, "is-bump");
       replay(orb, "is-spinning");
       if (bubble) bubble.remove();
       bubble = document.createElement("div");
       bubble.className = "fact-bubble";
       bubble.setAttribute("role", "status");
-      bubble.textContent = FACTS[factIdx++ % FACTS.length];
+      bubble.textContent = FACTS[factIdx % FACTS.length];
+      factIdx++;
       orb.appendChild(bubble);
       const r = photo.getBoundingClientRect();
       burst(r.left + r.width / 2, r.top + r.height / 2, 18, 140);
@@ -256,7 +248,7 @@
         bubble.classList.add("is-out");
         const b = bubble; bubble = null;
         setTimeout(() => b.remove(), 400);
-      }, 3600);
+      }, 4600);
     };
     photo.addEventListener("click", showFact);
     photo.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showFact(); } });
@@ -420,4 +412,4 @@
       setTimeout(() => toTop.classList.remove("is-launching"), 1200);
     });
   }
-})();
+});

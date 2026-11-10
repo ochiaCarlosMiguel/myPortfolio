@@ -1,0 +1,148 @@
+/* =========================================================
+   17-motion.css — newest motion layer.
+   Everything here is progressive enhancement: browsers without
+   support (or users who prefer reduced motion) get the static
+   design, nothing breaks.
+   ========================================================= */
+
+/* ---------- 1. Native scroll-driven animations ----------
+   Uses individual transform properties (scale / translate) so it
+   composes with the existing transform-based reveal + tilt. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* hero gently recedes as you scroll away from it */
+    .hero__grid {
+      animation: heroRecede linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 90vh;
+    }
+    /* opacity + scale only: both run on the GPU compositor, so scrolling stays smooth */
+    @keyframes heroRecede { to { opacity: .2; scale: .94; } }
+
+    /* cards settle from a slight zoom as they enter the screen */
+    :is(.tile, .x-card, .skill-group, .job__card, .project, .cert, .proficiency, .feature__stats > div) {
+      animation: cardSettle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    @keyframes cardSettle { from { scale: .93; } to { scale: 1; } }
+
+    /* certificate images drift inside their frames (parallax) */
+    /* subtle, so certificate text is never cropped; featured card stays still */
+    .cert:not(.cert--portrait):not(.cert--featured) .cert__media img {
+      scale: 1.05;
+      animation: imgDrift linear both;
+      animation-timeline: view();
+      animation-range: cover;
+    }
+    @keyframes imgDrift { from { translate: 0 -2%; } to { translate: 0 2%; } }
+
+    /* stats bar stretches in from the centre */
+    .stats {
+      animation: statsIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+    @keyframes statsIn { from { scale: .9 1; } to { scale: 1 1; } }
+  }
+}
+
+/* ---------- 2. Context cursor ("View", "Open", "Squash!") ---------- */
+.cursor__label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--body);
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: #0a0d12;
+  opacity: 0;
+  transform: scale(.5);
+  transition: opacity .25s ease, transform .35s var(--ease);
+  white-space: nowrap;
+}
+.cursor.has-label {
+  width: 58px;
+  height: 58px;
+  background: var(--lime);
+  border-color: var(--lime);
+  box-shadow: 0 4px 12px -6px rgba(10, 13, 18, .45);
+}
+.cursor.has-label .cursor__label { opacity: 1; transform: none; }
+.cursor.has-label ~ .cursor-dot, .cursor-dot.is-under-label { opacity: 0; }
+
+/* ---------- 3. Section "arrival" flash after menu navigation ---------- */
+.section-head.is-flash .section-title { animation: titleFlash 1.4s var(--ease); }
+.section-head.is-flash .eyebrow::before { animation: lineFlash 1.2s var(--ease); }
+@keyframes titleFlash {
+  0%   { text-shadow: 0 0 0 transparent; }
+  25%  { text-shadow: 0 0 34px rgba(196, 240, 66, .55); }
+  100% { text-shadow: 0 0 0 transparent; }
+}
+@keyframes lineFlash { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+
+/* ---------- 4. Side dot navigation (desktop only) ---------- */
+.dots-nav {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  z-index: 70;
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  translate: 0 -50%;
+}
+@media (min-width: 1200px) and (hover: hover) { .dots-nav { display: flex; } }
+.dots-nav a {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-2);
+  background: transparent;
+  transition: transform .4s var(--ease), background-color .3s ease, border-color .3s ease, height .4s var(--ease);
+}
+.dots-nav a:hover { border-color: var(--lime); transform: scale(1.3); }
+.dots-nav a.is-active { height: 28px; border-radius: 6px; background: var(--lime); border-color: var(--lime); }
+[data-theme="light"] .dots-nav a.is-active { background: #10b981; border-color: #10b981; }
+.dots-nav a span {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  translate: 0 -50%;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--text);
+  background: var(--glass);
+  border: 1px solid var(--line-2);
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .35s var(--ease);
+}
+.dots-nav a:hover span, .dots-nav a:focus-visible span { opacity: 1; transform: none; }
+
+/* ---------- 5. Living gradient border on the featured certificate ---------- */
+@property --ang { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.cert--featured {
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    conic-gradient(from var(--ang), var(--lime), var(--cyan), transparent 35%, transparent 65%, var(--lime)) border-box;
+  animation: spinBorder 6s linear infinite;
+}
+@keyframes spinBorder { to { --ang: 360deg; } }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cert--featured { animation: none; }
+  .section-head.is-flash .section-title, .section-head.is-flash .eyebrow::before { animation: none; }
+}
+@media print { .dots-nav { display: none !important; } }

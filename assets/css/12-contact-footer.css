@@ -1,0 +1,68 @@
+/* ---------- Contact ---------- */
+.contact__box {
+  position: relative;
+  padding: clamp(40px, 7vw, 90px) clamp(22px, 5vw, 70px);
+  border-radius: calc(var(--radius) + 10px);
+  background:
+    radial-gradient(80% 120% at 100% 0%, rgba(47, 213, 240, .16), transparent 60%),
+    radial-gradient(80% 120% at 0% 100%, rgba(196, 240, 66, .14), transparent 60%),
+    var(--card);
+  border: 1px solid var(--line-2);
+  text-align: center;
+  overflow: hidden;
+}
+.contact__box .eyebrow { justify-content: center; }
+.contact__box .eyebrow::before { display: none; }
+.contact__title { font-size: clamp(2.8rem, 9vw, 7rem); font-weight: 700; letter-spacing: -.05em; margin-bottom: 14px; }
+.contact__text { color: var(--muted); font-size: 1.08rem; max-width: 520px; margin: 0 auto 34px; }
+.contact__items { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 30px; }
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px 12px 12px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  text-align: left;
+  transition: border-color .3s ease;
+  max-width: 100%;
+}
+.contact-item:hover { border-color: var(--lime); }
+.contact-item small { display: block; font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+.contact-item > span:last-child, .contact-item__main > span:last-child { font-weight: 700; overflow-wrap: anywhere; }
+.contact-item__icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #0a0d12;
+}
+.contact-item__main { display: inline-flex; align-items: center; gap: 14px; min-width: 0; }
+.copy {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: var(--card);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.copy:hover { background: var(--cyan); color: #0a0d12; border-color: var(--cyan); }
+.contact .social { justify-content: center; }
+.contact__cv { margin: 0 auto 28px; }
+.mobile-menu.is-open .mobile-menu__links a:nth-child(8) { transition-delay: .5s; }
+
+/* ---------- Footer ---------- */
+.footer { padding: 34px 0 calc(34px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
+.footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.footer__links a { color: var(--muted); font-weight: 600; font-size: .9rem; transition: color .3s ease; }
+.footer__links a:hover { color: var(--lime-text); }
+.footer p { margin: 0; color: var(--muted); font-size: .85rem; }

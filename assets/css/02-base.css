@@ -1,0 +1,117 @@
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: clamp(15px, .3vw + 14px, 17px);
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+@supports (overflow: clip) { body { overflow-x: clip; } }
+body.is-loading { overflow: hidden; }
+body.menu-open { overflow: hidden; }
+
+/* subtle film grain */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  opacity: var(--grain);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 { font-family: var(--head); margin: 0; line-height: 1.1; letter-spacing: -.02em; overflow-wrap: break-word; }
+p { margin: 0 0 1rem; }
+ul { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; }
+::selection { background: var(--lime); color: #0a0d12; }
+:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; border-radius: 8px; }
+
+.container {
+  width: 100%;
+  max-width: clamp(1240px, 88vw, 1680px);
+  margin: 0 auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
+}
+
+em { font-style: normal; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.todo { color: var(--todo) !important; border: 1px dashed var(--todo) !important; background: rgba(255, 181, 71, .08) !important; }
+
+/* ---------- Preloader ---------- */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  transition: transform 1s var(--ease) .1s, visibility 0s linear 1.2s;
+}
+.preloader.is-done { transform: translateY(-100%); visibility: hidden; }
+.preloader__inner { width: min(420px, 84vw); font-family: var(--mono); }
+.preloader__label { color: var(--muted); font-size: .85rem; margin-bottom: 8px; }
+.preloader__count { font-family: var(--head); font-size: clamp(4rem, 14vw, 7rem); font-weight: 700; line-height: 1; margin: 0 0 18px; }
+.preloader__count span { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.preloader__bar { height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.preloader__bar span { display: block; height: 100%; width: 0; background: var(--grad); box-shadow: 0 0 14px var(--lime); }
+.preloader__status { margin-top: 12px; font-size: .78rem; color: var(--lime-text); min-height: 1.4em; }
+.blink { color: var(--lime-text); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- Custom cursor ---------- */
+.cursor, .cursor-dot { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .cursor, .cursor-dot {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 250;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* compact, subtle ring — guides the eye without covering what you point at */
+  .cursor {
+    width: 26px; height: 26px;
+    border: 1px solid rgba(196, 240, 66, .45);
+    transition: width .3s var(--ease), height .3s var(--ease), background-color .3s ease, border-color .3s ease, opacity .3s ease;
+  }
+  .cursor-dot { width: 5px; height: 5px; background: var(--lime); }
+  .cursor.is-hover { width: 40px; height: 40px; background: rgba(196, 240, 66, .06); border-color: rgba(196, 240, 66, .8); }
+  .cursor.is-hidden, .cursor-dot.is-hidden { opacity: 0; }
+}
+
+/* ---------- Skip link (keyboard users jump straight to content) ---------- */
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: -80px;
+  z-index: 400;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #0a0d12;
+  background: var(--lime);
+  transition: top .3s var(--ease);
+}
+.skip-link:focus { top: 16px; }
+
+/* loading screen can be skipped */
+.preloader { cursor: pointer; }
+.preloader__skip {
+  margin: 22px 0 0;
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--muted);
+  opacity: 0;
+  animation: logoIn .6s var(--ease) .5s forwards;
+}

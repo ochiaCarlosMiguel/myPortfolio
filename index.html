@@ -6,6 +6,48 @@
   <meta name="theme-color" content="#07090e" />
   <title>Carlos Miguel Ochia | QA Engineer</title>
   <meta name="description" content="Carlos Miguel Ochia — QA Engineer specializing in manual testing, automation testing, and release validation." />
+  <meta name="author" content="Carlos Miguel Ochia" />
+  <link rel="canonical" href="https://ochiacarlosmiguel.github.io/myPortfolio/" />
+
+  <!-- Social sharing preview (LinkedIn, Facebook, Messenger, Slack, X) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Carlos Miguel Ochia" />
+  <meta property="og:title" content="Carlos Miguel Ochia | QA Engineer" />
+  <meta property="og:description" content="QA Engineer specializing in manual testing, automation testing, and release validation. Open to QA Engineer / Software Tester opportunities." />
+  <meta property="og:url" content="https://ochiacarlosmiguel.github.io/myPortfolio/" />
+  <meta property="og:image" content="https://ochiacarlosmiguel.github.io/myPortfolio/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Carlos Miguel Ochia — QA Engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carlos Miguel Ochia | QA Engineer" />
+  <meta name="twitter:description" content="QA Engineer specializing in manual testing, automation testing, and release validation." />
+  <meta name="twitter:image" content="https://ochiacarlosmiguel.github.io/myPortfolio/assets/img/og-image.jpg" />
+
+  <!-- Structured data: helps search engines understand who this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Miguel B. Ochia",
+    "jobTitle": "QA Engineer",
+    "worksFor": { "@type": "Organization", "name": "AutomationHQ" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Bulacan State University" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Hagonoy, Bulacan", "addressCountry": "PH" },
+    "email": "mailto:carlosmiguelb.ochia@gmail.com",
+    "url": "https://ochiacarlosmiguel.github.io/myPortfolio/",
+    "image": "https://ochiacarlosmiguel.github.io/myPortfolio/assets/img/og-image.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/carlos-miguel-ochia-367072279/",
+      "https://github.com/ochiaCarlosMiguel",
+      "https://www.facebook.com/carlos.ochia.56/"
+    ],
+    "knowsAbout": ["Manual Testing", "Test Automation", "Regression Testing", "Root Cause Analysis", "Release Validation", "Agile", "Scrum"]
+  }
+  </script>
+
+  <!-- Load the hero photo early (it's above the fold) -->
+  <link rel="preload" as="image" href="assets/img/profile.jpg" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -13,8 +55,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="playful.css" />
+  <link rel="stylesheet" href="assets/css/01-tokens.css" />
+  <link rel="stylesheet" href="assets/css/02-base.css" />
+  <link rel="stylesheet" href="assets/css/03-nav.css" />
+  <link rel="stylesheet" href="assets/css/04-buttons.css" />
+  <link rel="stylesheet" href="assets/css/05-hero.css" />
+  <link rel="stylesheet" href="assets/css/06-sections.css" />
+  <link rel="stylesheet" href="assets/css/07-about.css" />
+  <link rel="stylesheet" href="assets/css/08-experience.css" />
+  <link rel="stylesheet" href="assets/css/09-skills.css" />
+  <link rel="stylesheet" href="assets/css/10-projects.css" />
+  <link rel="stylesheet" href="assets/css/11-certificates.css" />
+  <link rel="stylesheet" href="assets/css/12-contact-footer.css" />
+  <link rel="stylesheet" href="assets/css/13-overlays.css" />
+  <link rel="stylesheet" href="assets/css/14-responsive.css" />
+  <link rel="stylesheet" href="assets/css/15-effects.css" />
+  <link rel="stylesheet" href="assets/css/16-playful.css" />
+  <link rel="stylesheet" href="assets/css/17-motion.css" />
   <script>
     /* Dark is the default; apply a saved choice before first paint */
     (function () {
@@ -26,6 +83,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============ PRELOADER ============ -->
   <div class="preloader" id="preloader" aria-hidden="true">
@@ -81,7 +139,7 @@
       <a href="#works"><small>05</small>Projects</a>
       <a href="#certificates"><small>06</small>Certificates</a>
       <a href="#contact"><small>07</small>Contact</a>
-      <a href="Carlos-Miguel-Ochia-Resume.pdf" download="Carlos-Miguel-Ochia-Resume.pdf"><small>CV</small>Download CV</a>
+      <a href="assets/docs/Carlos-Miguel-Ochia-Resume.pdf" download="Carlos-Miguel-Ochia-Resume.pdf"><small>CV</small>Download CV</a>
     </nav>
     <div class="mobile-menu__social">
       <a href="https://www.facebook.com/carlos.ochia.56/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -90,7 +148,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="main">
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="home">
@@ -123,7 +181,7 @@
 
           <div class="hero__actions intro" style="--d:8">
             <a href="#works" class="btn btn--primary magnetic"><span>View Projects</span><i class="fas fa-arrow-down"></i></a>
-            <a href="Carlos-Miguel-Ochia-Resume.pdf" class="btn btn--ghost magnetic" download="Carlos-Miguel-Ochia-Resume.pdf"><span>Download CV</span><i class="fas fa-file-arrow-down"></i></a>
+            <a href="assets/docs/Carlos-Miguel-Ochia-Resume.pdf" class="btn btn--ghost magnetic" download="Carlos-Miguel-Ochia-Resume.pdf"><span>Download CV</span><i class="fas fa-file-arrow-down"></i></a>
           </div>
 
           <div class="social intro" style="--d:9">
@@ -143,7 +201,7 @@
             </svg>
             <div class="orb__ring" aria-hidden="true"></div>
             <div class="orb__photo">
-              <img src="profile-web.jpg" alt="Portrait of Carlos Miguel Ochia" width="720" height="720" fetchpriority="high" />
+              <img src="assets/img/profile.jpg" alt="Portrait of Carlos Miguel Ochia" width="720" height="720" fetchpriority="high" />
             </div>
             <span class="orb__chip orb__chip--a" aria-hidden="true"><i class="fas fa-robot"></i> AHQ Automation</span>
             <span class="orb__chip orb__chip--b" aria-hidden="true"><i class="fas fa-check"></i> Regression passed</span>
@@ -220,7 +278,7 @@
             <span class="tile__icon"><i class="fas fa-graduation-cap"></i></span>
             <span class="tile__tag">Education</span>
             <h3>Bachelor of Industrial Technology</h3>
-            <p>Major in Computer Technology<br /><strong>Bulacan State University</strong><br />August 2020 – July 2025</p>
+            <p>Major in Computer Technology<br /><strong>Bulacan State University</strong><br />August 2021 – July 2025</p>
             <p class="badge-line"><i class="fas fa-star"></i> Dean's Lister</p>
           </article>
 
@@ -772,8 +830,8 @@
 
         <div class="certs">
           <!-- Professional (featured) -->
-          <button class="cert cert--featured reveal" data-cat="professional" data-full="Certificate of Completion.jpg">
-            <span class="cert__media"><img src="certs/thumb-ahq.jpg" alt="Certificate of Completion — Internship at AutomationHQ (January 27 – May 12, 2025)" loading="lazy" width="720" height="509" /></span>
+          <button class="cert cert--featured reveal" data-cat="professional" data-full="assets/img/certs/ahq-internship-2025.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/ahq-internship-2025.jpg" alt="Certificate of Completion — Internship at AutomationHQ (January 27 – May 12, 2025)" loading="lazy" width="720" height="509" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--professional"><i class="fas fa-briefcase"></i> Professional</span>
               <span class="cert__title">QA Internship — Certificate of Completion</span>
@@ -784,8 +842,8 @@
           </button>
 
           <!-- Leadership -->
-          <button class="cert reveal" data-cat="leadership" data-full="certs/cert4-scan.jpg">
-            <span class="cert__media"><img src="certs/thumb-cert4.jpg" alt="Certificate of Appreciation — Associate Director for Communication, SPICE 2022–2023" loading="lazy" width="720" height="522" /></span>
+          <button class="cert reveal" data-cat="leadership" data-full="assets/img/certs/spice-associate-director-2023.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/spice-associate-director-2023.jpg" alt="Certificate of Appreciation — Associate Director for Communication, SPICE 2022–2023" loading="lazy" width="720" height="522" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
               <span class="cert__title">Associate Director for Communication</span>
@@ -793,8 +851,8 @@
             </span>
             <span class="cert__zoom"><i class="fas fa-expand"></i></span>
           </button>
-          <button class="cert reveal" data-cat="leadership" data-full="cert2.jpg">
-            <span class="cert__media"><img src="certs/thumb-cert2.jpg" alt="Certificate of Appreciation — Organizer, Comptech-niques: Crafting Your Career in the Dynamic World of Technology (SPICE, May 2023)" loading="lazy" width="720" height="509" /></span>
+          <button class="cert reveal" data-cat="leadership" data-full="assets/img/certs/spice-organizer-crafting-career-2023-05.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/spice-organizer-crafting-career-2023-05.jpg" alt="Certificate of Appreciation — Organizer, Comptech-niques: Crafting Your Career in the Dynamic World of Technology (SPICE, May 2023)" loading="lazy" width="720" height="509" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
               <span class="cert__title">Organizer — Comptech-niques: Crafting Your Career</span>
@@ -802,8 +860,8 @@
             </span>
             <span class="cert__zoom"><i class="fas fa-expand"></i></span>
           </button>
-          <button class="cert reveal" data-cat="leadership" data-full="certs/cert5-scan.jpg">
-            <span class="cert__media"><img src="certs/thumb-cert5.jpg" alt="Certificate of Appreciation — Organizer, Comptechniques: Augment Your Tech Knowledge (SPICE, December 2023)" loading="lazy" width="720" height="553" /></span>
+          <button class="cert reveal" data-cat="leadership" data-full="assets/img/certs/spice-organizer-augment-2023-12.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/spice-organizer-augment-2023-12.jpg" alt="Certificate of Appreciation — Organizer, Comptechniques: Augment Your Tech Knowledge (SPICE, December 2023)" loading="lazy" width="720" height="553" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
               <span class="cert__title">Organizer — Comptechniques: Augment Your Tech Knowledge</span>
@@ -811,8 +869,8 @@
             </span>
             <span class="cert__zoom"><i class="fas fa-expand"></i></span>
           </button>
-          <button class="cert reveal" data-cat="leadership" data-full="certs/cert6-scan.jpg">
-            <span class="cert__media"><img src="certs/thumb-cert6.jpg" alt="Certificate of Appreciation — Organizer, Comptechniques: Beyond Basics (SPICE, December 2023)" loading="lazy" width="720" height="516" /></span>
+          <button class="cert reveal" data-cat="leadership" data-full="assets/img/certs/spice-organizer-beyond-basics-2023-12.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/spice-organizer-beyond-basics-2023-12.jpg" alt="Certificate of Appreciation — Organizer, Comptechniques: Beyond Basics (SPICE, December 2023)" loading="lazy" width="720" height="516" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--leadership"><i class="fas fa-people-group"></i> Leadership</span>
               <span class="cert__title">Organizer — Comptechniques: Beyond Basics</span>
@@ -822,8 +880,8 @@
           </button>
 
           <!-- Award -->
-          <button class="cert cert--portrait reveal" data-cat="award" data-full="certs/cert3-scan.jpg" style="--blur:url('certs/thumb-cert3.jpg')">
-            <span class="cert__media"><img src="certs/thumb-cert3.jpg" alt="Certificate of Excellence — PC Building &amp; PC Troubleshooting competitions, Bulacan Tech Expo (October 2023)" loading="lazy" width="720" height="1013" /></span>
+          <button class="cert cert--portrait reveal" data-cat="award" data-full="assets/img/certs/btx-excellence-2023.jpg">
+            <span class="cert__media"><span class="cert__blur" aria-hidden="true" style="background-image:url('assets/img/certs/thumbs/btx-excellence-2023.jpg')"></span><img src="assets/img/certs/thumbs/btx-excellence-2023.jpg" alt="Certificate of Excellence — PC Building &amp; PC Troubleshooting competitions, Bulacan Tech Expo (October 2023)" loading="lazy" width="720" height="1013" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--award"><i class="fas fa-trophy"></i> Award</span>
               <span class="cert__title">Certificate of Excellence — PC Building &amp; Troubleshooting</span>
@@ -833,8 +891,8 @@
           </button>
 
           <!-- Learning & Events -->
-          <button class="cert reveal" data-cat="learning" data-full="certificate.png">
-            <span class="cert__media"><img src="certs/thumb-sql.jpg" alt="Course Certificate — Introduction to SQL (Sololearn, 2023)" loading="lazy" width="720" height="508" /></span>
+          <button class="cert reveal" data-cat="learning" data-full="assets/img/certs/sololearn-intro-to-sql-2023.png">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/sololearn-intro-to-sql-2023.jpg" alt="Course Certificate — Introduction to SQL (Sololearn, 2023)" loading="lazy" width="720" height="508" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--learning"><i class="fas fa-book-open"></i> Learning</span>
               <span class="cert__title">Introduction to SQL</span>
@@ -842,8 +900,8 @@
             </span>
             <span class="cert__zoom"><i class="fas fa-expand"></i></span>
           </button>
-          <button class="cert reveal" data-cat="learning" data-full="certs/cert7-scan.jpg">
-            <span class="cert__media"><img src="certs/thumb-cert7.jpg" alt="Certificate of Participation — Comptechniques: Augment Your Tech Knowledge (SPICE, December 2023)" loading="lazy" width="720" height="564" /></span>
+          <button class="cert reveal" data-cat="learning" data-full="assets/img/certs/spice-participant-augment-2023-12.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/spice-participant-augment-2023-12.jpg" alt="Certificate of Participation — Comptechniques: Augment Your Tech Knowledge (SPICE, December 2023)" loading="lazy" width="720" height="564" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--learning"><i class="fas fa-calendar-check"></i> Event</span>
               <span class="cert__title">Participant — Comptechniques: Augment Your Tech Knowledge</span>
@@ -851,8 +909,8 @@
             </span>
             <span class="cert__zoom"><i class="fas fa-expand"></i></span>
           </button>
-          <button class="cert reveal" data-cat="learning" data-full="certs/cert8-scan.jpg">
-            <span class="cert__media"><img src="certs/thumb-cert8.jpg" alt="Certificate of Participation — SPICE-YAL na Handog para sa Kabataan community outreach (March 2023)" loading="lazy" width="720" height="508" /></span>
+          <button class="cert reveal" data-cat="learning" data-full="assets/img/certs/spice-yal-outreach-2023-03.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/spice-yal-outreach-2023-03.jpg" alt="Certificate of Participation — SPICE-YAL na Handog para sa Kabataan community outreach (March 2023)" loading="lazy" width="720" height="508" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--learning"><i class="fas fa-hand-holding-heart"></i> Outreach</span>
               <span class="cert__title">Participant — SPICE-YAL na Handog para sa Kabataan</span>
@@ -886,7 +944,7 @@
             </div>
           </div>
 
-          <a href="Carlos-Miguel-Ochia-Resume.pdf" class="btn btn--primary magnetic contact__cv" download="Carlos-Miguel-Ochia-Resume.pdf"><span>Download My CV</span><i class="fas fa-file-arrow-down"></i></a>
+          <a href="assets/docs/Carlos-Miguel-Ochia-Resume.pdf" class="btn btn--primary magnetic contact__cv" download="Carlos-Miguel-Ochia-Resume.pdf"><span>Download My CV</span><i class="fas fa-file-arrow-down"></i></a>
 
           <div class="social social--big">
             <a href="https://www.facebook.com/carlos.ochia.56/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -928,7 +986,16 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="main.js"></script>
-  <script src="playful.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/hero.js"></script>
+  <script src="assets/js/preloader.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/scroll-fx.js"></script>
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/certificates.js"></script>
+  <script src="assets/js/playful.js"></script>
+  <script src="assets/js/motion.js"></script>
 </body>
 </html>

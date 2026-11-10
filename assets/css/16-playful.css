@@ -121,23 +121,60 @@
 .orb__photo { cursor: pointer; }
 .orb.is-spinning .orb__photo { animation: photoSpin .8s var(--ease); }
 @keyframes photoSpin { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }
+/* ---------- Photo hint: a small 💡 bulb + label circling the photo ----------
+   .orb__orbit spins around the photo; the bulb counter-spins so its text stays upright.
+   After the first fact (.orb.hint-parked) both stop exactly where they are. */
+.orb__orbit {
+  position: absolute;
+  inset: 12%;
+  z-index: 3;
+  pointer-events: none;
+  animation: orbitSpin 30s linear infinite;
+}
+@keyframes orbitSpin { to { rotate: 360deg; } }
+@keyframes orbitCounter { to { rotate: -360deg; } }
+
 .orb__hint {
   position: absolute;
   left: 50%;
-  bottom: 9%;
-  translate: -50% 0;
-  z-index: 3;
-  padding: 4px 10px;
+  top: 0;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  padding: 4px 11px 4px 4px;
   border-radius: 999px;
-  font-family: var(--mono);
-  font-size: .68rem;
   white-space: nowrap;
   color: #0a0d12;
   background: var(--lime);
-  pointer-events: none;
-  animation: hintBob 2.4s ease-in-out infinite;
+  box-shadow: 0 10px 26px -10px rgba(196, 240, 66, .8);
+  animation: orbitCounter 30s linear infinite, badgePulse 2.4s ease-out infinite;
 }
-@keyframes hintBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.orb.hint-parked .orb__orbit,
+.orb.hint-parked .orb__hint { animation-play-state: paused; }   /* stops where it was clicked */
+@keyframes badgePulse {
+  0%   { box-shadow: 0 10px 26px -10px rgba(196, 240, 66, .8), 0 0 0 0 rgba(196, 240, 66, .55); }
+  70%  { box-shadow: 0 10px 26px -10px rgba(196, 240, 66, .8), 0 0 0 12px rgba(196, 240, 66, 0); }
+  100% { box-shadow: 0 10px 26px -10px rgba(196, 240, 66, .8), 0 0 0 0 rgba(196, 240, 66, 0); }
+}
+.orb__hint-icon {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  font-size: .9rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .4);
+}
+.orb__hint-icon.is-bump { animation: hintBump .5s cubic-bezier(.2, 1.6, .4, 1); }
+@keyframes hintBump { 40% { transform: scale(1.3) rotate(-10deg); } }
+.orb__hint-short { margin-left: 7px; font: 800 .74rem/1 var(--body); }
+
+/* phones: no orbit — the bulb sits just under the photo */
+@media (max-width: 640px) {
+  .orb__orbit { animation: none; }
+  .orb__hint { top: 100%; translate: -50% -70%; animation: badgePulse 2.4s ease-out infinite; }
+}
 .fact-bubble {
   position: absolute;
   z-index: 4;
@@ -324,7 +361,8 @@
   .sim-btn { margin-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .bug, .bug .leg, .orb__hint { animation: none !important; }
+  .bug, .bug .leg, .orb__hint, .orb__orbit { animation: none !important; }
+  .orb__hint { top: 100%; translate: -50% -70%; }   /* calm mode: still, readable, under the photo */
   .spark, .burst { display: none; }
 }
 @media print { .bug, .bug-fixed, .hud, .orb__hint, .sim-btn { display: none !important; } }

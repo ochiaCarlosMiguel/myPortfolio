@@ -1,0 +1,65 @@
+/* ---------- About bento ---------- */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  gap: 18px;
+}
+.tile {
+  position: relative;
+  padding: clamp(22px, 2.6vw, 32px);
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: border-color .4s ease, transform .6s var(--ease);
+}
+.tile:hover { border-color: rgba(196, 240, 66, .35); transform: translateY(-4px); }
+.tile--story { grid-column: span 2; grid-row: span 2; }
+.tile--story p { color: var(--muted); }
+.tile--story .lead { color: var(--text); font-size: clamp(1.05rem, .6vw + .95rem, 1.2rem); font-weight: 500; }
+.tile--free { grid-column: span 2; background: linear-gradient(135deg, rgba(196, 240, 66, .1), rgba(47, 213, 240, .06)) , var(--card); }
+.tile__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--lime-text);
+  margin-bottom: 16px;
+}
+.tile__icon {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--lime-soft);
+  color: var(--lime-text);
+  font-size: 1.1rem;
+  transition: transform .6s var(--ease);
+}
+.tile:hover .tile__icon { transform: rotate(-12deg) scale(1.12); }
+.tile h3 { font-size: 1.3rem; margin-bottom: 8px; padding-right: 50px; }
+.tile p:last-child { margin-bottom: 0; }
+.tile--edu p, .tile--free p { color: var(--muted); }
+.tile--edu strong { color: var(--text); }
+
+.mini-timeline { display: grid; gap: 14px; }
+.mini-timeline li { display: grid; gap: 2px; padding-left: 16px; border-left: 2px solid var(--cyan); }
+.mini-timeline b { font-family: var(--mono); color: var(--cyan-text); font-size: .8rem; }
+
+.focus-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.focus-list li {
+  padding: 6px 12px;
+  font-size: .85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: var(--card-2);
+  border: 1px solid var(--line);
+}
