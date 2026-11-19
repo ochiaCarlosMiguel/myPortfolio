@@ -213,7 +213,7 @@
       <div class="container">
         <dl class="stats">
           <div class="stat"><dt>Projects</dt><dd><span data-count="4">0</span></dd></div>
-          <div class="stat"><dt>Certificates</dt><dd><span data-count="9">0</span></dd></div>
+          <div class="stat"><dt>Certificates</dt><dd><span data-count="10">0</span></dd></div>
           <div class="stat"><dt>Testing types</dt><dd><span data-count="9">0</span>+</dd></div>
           <div class="stat"><dt>Leadership roles</dt><dd><span data-count="2">0</span></dd></div>
         </dl>
@@ -399,6 +399,10 @@
                   <li><i class="fa-brands fa-github"></i> GitHub</li>
                 </ul>
               </footer>
+              <footer class="job__tools">
+                <span>Recognition</span>
+                <button type="button" class="cert-link" data-cert-index="0"><i class="fas fa-trophy"></i> Star Performer — Q2 2026 (view certificate)</button>
+              </footer>
             </div>
           </article>
 
@@ -423,7 +427,7 @@
               </ul>
               <footer class="job__tools">
                 <span>Recognition</span>
-                <button type="button" class="cert-link" data-cert-index="0"><i class="fas fa-award"></i> View internship completion certificate</button>
+                <button type="button" class="cert-link" data-cert-index="1"><i class="fas fa-award"></i> View internship completion certificate</button>
               </footer>
             </div>
           </article>
@@ -821,16 +825,28 @@
         </header>
 
         <div class="cert-filters reveal" role="group" aria-label="Filter certificates">
-          <button class="cert-filter is-active" data-cf="all" aria-pressed="true"><i class="fas fa-layer-group"></i> All <span class="cert-filter__n">9</span></button>
+          <button class="cert-filter is-active" data-cf="all" aria-pressed="true"><i class="fas fa-layer-group"></i> All <span class="cert-filter__n">10</span></button>
           <button class="cert-filter" data-cf="leadership" aria-pressed="false"><i class="fas fa-people-group"></i> Leadership <span class="cert-filter__n">4</span></button>
           <button class="cert-filter" data-cf="professional" aria-pressed="false"><i class="fas fa-briefcase"></i> Professional <span class="cert-filter__n">1</span></button>
-          <button class="cert-filter" data-cf="award" aria-pressed="false"><i class="fas fa-trophy"></i> Awards <span class="cert-filter__n">1</span></button>
+          <button class="cert-filter" data-cf="award" aria-pressed="false"><i class="fas fa-trophy"></i> Awards <span class="cert-filter__n">2</span></button>
           <button class="cert-filter" data-cf="learning" aria-pressed="false"><i class="fas fa-book-open"></i> Learning &amp; Events <span class="cert-filter__n">3</span></button>
         </div>
 
         <div class="certs">
-          <!-- Professional (featured) -->
-          <button class="cert cert--featured reveal" data-cat="professional" data-full="assets/img/certs/ahq-internship-2025.jpg">
+          <!-- Award (featured) -->
+          <button class="cert cert--featured reveal" data-cat="award" data-full="assets/img/certs/ahq-star-performer-q2-2026.jpg">
+            <span class="cert__media"><img src="assets/img/certs/thumbs/ahq-star-performer-q2-2026.jpg" alt="Certificate of Recognition — Star Performer for the 2nd Quarter of 2026, AutomationHQ Inc. (November 20, 2026)" loading="lazy" width="720" height="509" /></span>
+            <span class="cert__body">
+              <span class="cert__tag cert__tag--award"><i class="fas fa-trophy"></i> Award</span>
+              <span class="cert__title">Star Performer — Q2 2026</span>
+              <span class="cert__meta">AutomationHQ Inc. · Nov 20, 2026</span>
+              <span class="cert__note">Certificate of Recognition for outstanding performance, dedication, and valuable contributions to the team.</span>
+            </span>
+            <span class="cert__zoom"><i class="fas fa-expand"></i></span>
+          </button>
+
+          <!-- Professional -->
+          <button class="cert reveal" data-cat="professional" data-full="assets/img/certs/ahq-internship-2025.jpg">
             <span class="cert__media"><img src="assets/img/certs/thumbs/ahq-internship-2025.jpg" alt="Certificate of Completion — Internship at AutomationHQ (January 27 – May 12, 2025)" loading="lazy" width="720" height="509" /></span>
             <span class="cert__body">
               <span class="cert__tag cert__tag--professional"><i class="fas fa-briefcase"></i> Professional</span>
